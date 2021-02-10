@@ -25,7 +25,8 @@ execute(client, message, cmd, args, Discord){
             Game commands
             -roll (rolls a die)
             -rps (a game of rock paper scissors against a bot)
-            
+            -8ball (let the 8ball answer your questions)            
+
             Misc. commands
             -invite (sends a link for the bot invite)
             -commandlist (lists the commands for the bot)
