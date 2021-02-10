@@ -12,7 +12,7 @@ module.exports = {
    * @param {String[]} args
    */
 
-  execute(message, args) {
+  execute(client, message, cmd, args, Discord) {
     const randomRoll = Math.floor(Math.random() * 6) + 1;
     const roll = new MessageEmbed();
     roll.setTitle("Roll!");
