@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: '8ball',
   description: "this is a 8ball command!",
-  execute(message, args) {
+  execute(client, message, cmd, args, Discord) {
       
     if(!args[1]) return message.reply("please ask a full question");
     let replies = ["As I see it, yes.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again.", "Don't count on it.", "It is certain.", "It is decidedly so."];
