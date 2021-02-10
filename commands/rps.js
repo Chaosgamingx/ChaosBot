@@ -2,7 +2,7 @@ const discord = require('discord.js')
 module.exports = {
 	name: "rps",
 	description: "play a game of rock, paper and scissors",
-    async execute(message, args) {
+    async execute(client, message, cmd, args, Discord) {
 		let embed = new discord.MessageEmbed()
 		.setTitle("RPS GAME")
 		.setDescription("React to play!")
