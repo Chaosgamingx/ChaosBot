@@ -21,6 +21,10 @@ execute(client, message, cmd, args, Discord){
             -bidoof (pokemon)
             -mouthwash (mouthwash)
             -rickrolled (don't)
+
+            Game commands
+            -roll (rolls a die)
+            -rps (a game of rock paper scissors against a bot)
             
             Misc. commands
             -invite (sends a link for the bot invite)
