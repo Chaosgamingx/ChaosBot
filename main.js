@@ -10,4 +10,4 @@ client.events = new Discord.Collection();
 })
 
 
-client.login('NTMwMjY3MjYzNTAxMDc0NDQz.XC2n3w.tzI7r1AC1WhwtbunE3wEu-R6dmA');
+client.login('process.env.ChaosBot-TOKEN');
