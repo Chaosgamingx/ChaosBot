@@ -10,4 +10,4 @@ client.events = new Discord.Collection();
 })
 
 
-client.login('process.env.ChaosBot-TOKEN');
+client.login(process.env.CHAOS_TOKEN);
