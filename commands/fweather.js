@@ -3,7 +3,7 @@ const weather = require('weather-js');
 const Discord = require('discord.js');
 
 module.exports = {
-    name: 'weather',
+    name: 'fweather',
     aliases: ['wthr'],
     async execute(client, message, cmd, args, Discord) {
     
