@@ -33,7 +33,8 @@ execute(client, message, cmd, args, Discord){
             -membercount (tells you how many members are in the server)
             -ping (shows the bots ping info)
             -userinfo (displays a users information)
-            -weather (displays weather for a state or city)`); 
+            -weather (displays weather for a state or city)
+            -fweather (displays weather in fahrenheit for a state or city)`); 
 
         message.channel.send(embed)              
     }
