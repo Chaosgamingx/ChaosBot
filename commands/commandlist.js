@@ -21,6 +21,7 @@ execute(client, message, cmd, args, Discord){
             -bidoof (pokemon)
             -mouthwash (mouthwash)
             -rickrolled (don't)
+            -trumpmeme (displays a trump meme)
 
             Game commands
             -roll (rolls a die)
