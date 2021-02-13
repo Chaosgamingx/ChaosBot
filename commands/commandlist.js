@@ -32,6 +32,7 @@ execute(client, message, cmd, args, Discord){
             -invite (sends a link for the bot invite)
             -commandlist (lists the commands for the bot)
             -serverinfo (displays information about the server)
+            -reminder (you can set a reminder with this bot)
             -ping (shows the bots ping info)
             -userinfo (displays a users information)
             -weather (displays weather for a state or city)
