@@ -14,21 +14,23 @@ module.exports = {
 
         if(result === undefined || result.length === 0) return message.channel.send('**Invalid** location');
 
+        const dc = Math.round(((result[0].current.temperature - 32) * 5 / 9) * 100) / 100
+                const dc2 = Math.round(((result[0].current.feelslike - 32) * 5 / 9) * 100) / 100
+                const b4 = result[0].current.winddisplay.split(' ')
+                const a4 = Math.round(b4[0] * 1.609344) + 'mph' + b4[2] 
+
         var current = result[0].current;
         var location = result[0].location;
 
         const weatherinfo = new Discord.MessageEmbed()
-        .setDescription(`**${current.skytext}**`)
-        .setAuthor(`Weather forecast for ${current.observationpoint}`)
-        .setThumbnail(current.imageUrl)
-        .setColor(0x111111)
-        .addField('Timezone', `UTC${location.timezone}`, true)
-        .addField('Degree Type', 'Celsius', true)
-        .addField('Temperature', `${current.temperature}°`, true)
-        .addField('Wind', current.winddisplay, true)
-        .addField('Feels like', `${current.feelslike}°`, true)
-        .addField('Humidity', `${current.humidity}%`, true)
-
+        .setColor('RANDOM')
+        .setTitle(`Weather in: ${result[0].location.name}`)
+        .setThumbnail(result[0].current.imageUrl)
+        .setDescription('Timezone', `UTC${location.timezone}`, true)
+        .addField('Tempature: ', `${result[0].current.temperature}°F \n ${dc}°C`, true)
+        .addField('Feels Like: ', `${result[0].current.feelslike}°F \n ${dc2}°C`, true)
+        .addField('Humidity: ', `${result[0].current.humidity}%`, true)
+        .setDescription(`**Sky weather:** ${result[0].current.skytext} \n\n **Wind info:** ${result[0].current.winddisplay} (${a4}) \n\n **Timezone** UTC${location.timezone}`)
 
         message.channel.send(weatherinfo)
         })        
