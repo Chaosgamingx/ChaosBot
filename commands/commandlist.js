@@ -27,6 +27,7 @@ execute(client, message, cmd, args, Discord){
             **Misc. commands**
             -invite (sends a link for the bot invite)
             -commandlist (lists the commands for the bot)
+            -wiki (search for anything on wikipedia)
             -reminder (set a reminder from discord)
             -ping (shows the bots ping info)
             -serverinfo (displays some info about the server)
