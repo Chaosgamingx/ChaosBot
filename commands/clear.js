@@ -3,7 +3,7 @@ module.exports = {
     description: "clears text!",
     async execute(client, message, args) {
 
-        if (message.member.permissions.has("ADMINISTRATOR"))  {
+        if (message.member.permissions.has("MANAGE_MESSAGES "))  {
 
         if(!args[0]) return message.reply("please enter an amount to delete");
         if(isNaN(args[0])) return message.reply("please enter a real number");
