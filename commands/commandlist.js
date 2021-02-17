@@ -8,7 +8,6 @@ execute(client, message, cmd, args, Discord){
             .setDescription(`
             **Mod commands**
             -ban (bans members)
-            -clear (clears chat up to 14 days)
             -kick (kicks members)
             
             
