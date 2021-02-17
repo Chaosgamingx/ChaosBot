@@ -4,7 +4,7 @@ module.exports = {
     description: "this command mutes a member!",
     execute(client, message, args) {
        
-        if (message.member.permissions.has("ADMINISTRATOR")) {
+        if (message.member.permissions.has("MUTE_MEMBERS")) {
        
         const target = message.mentions.users.first();
         if (target) {
