@@ -10,7 +10,7 @@ execute(client, message, cmd, args, Discord){
             -ban (bans members)
             -clear (clears chat up to 14 days)
             -kick (kicks members)
-            -mute (keeps a member from talking)
+            -mute (keeps a member from talking. you can also do =mute (seconds) if you want a mute that will last for a certain duration.)
             -unmute (unmutes the member)
             
             **Music commands**
