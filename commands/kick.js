@@ -3,7 +3,7 @@ module.exports = {
     description: "this is a kicking command!",
     execute(client, message, args) {
 
-        if (message.member.permissions.has("ADMINISTRATOR"))   {
+        if (message.member.permissions.has("KICK_MEMBERS"))   {
             const member = message.mentions.users.first();
             if (member) {
                 const memberTarger = message.guild.members.cache.get(member.id);
