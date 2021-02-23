@@ -21,6 +21,10 @@ execute(client, message, cmd, args, Discord){
             -mouthwash (mouthwash)
             -rickrolled (don't)
             -trumpmeme (displays a trump meme)
+
+            **Games**
+            -rps (a rock paper scissors game)
+            -roll (rolls a die)
             
             **Misc. commands**
             -invite (sends a link for the bot invite)
