@@ -27,7 +27,7 @@ module.exports = {
         .setTitle(`Weather in: ${result[0].location.name}`)
         .setThumbnail(result[0].current.imageUrl)
         .setDescription('Timezone', `UTC${location.timezone}`, true)
-        .addField('Tempature: ', `${result[0].current.temperature}°F \n ${dc}°C`, true)
+        .addField('Temperature: ', `${result[0].current.temperature}°F \n ${dc}°C`, true)
         .addField('Feels Like: ', `${result[0].current.feelslike}°F \n ${dc2}°C`, true)
         .addField('Humidity: ', `${result[0].current.humidity}%`, true)
         .setDescription(`**Sky weather:** ${result[0].current.skytext} \n\n **Wind info:** ${result[0].current.winddisplay} (${a4}) \n\n **Timezone** UTC${location.timezone}`)
