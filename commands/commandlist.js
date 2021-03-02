@@ -9,7 +9,9 @@ execute(client, message, cmd, args, Discord){
             **Mod commands**
             -ban (bans members)
             -kick (kicks members)
-            
+            -mute (mutes a member)
+            -unmute (unmutes a member)
+            -clear (clears text of the persons choice)
             
             **Music commands**
             -play (plays a song)
