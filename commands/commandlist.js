@@ -9,7 +9,9 @@ execute(client, message, cmd, args, Discord){
             **Mod commands**
             -ban (bans members)
             -kick (kicks members)
-            
+            -mute (mutes a member)
+            -unmute (unmutes a member)
+            -clear (clears text of the persons choice)
             
             **Music commands**
             -play (plays a song)
@@ -21,6 +23,10 @@ execute(client, message, cmd, args, Discord){
             -mouthwash (mouthwash)
             -rickrolled (don't)
             -trumpmeme (displays a trump meme)
+
+            **Games**
+            -rps (a rock paper scissors game)
+            -roll (rolls a die)
             
             **Misc. commands**
             -invite (sends a link for the bot invite)
