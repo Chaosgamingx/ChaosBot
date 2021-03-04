@@ -15,6 +15,7 @@
     "ffmpeg-static": "^4.2.7",
     "fs": "0.0.1-security",
     "git": "^0.1.5",
+    "got": "^11.8.2",
     "install": "^0.13.0",
     "mime": "^2.5.0",
     "moment": "^2.29.1",
