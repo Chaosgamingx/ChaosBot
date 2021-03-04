@@ -23,11 +23,17 @@ execute(client, message, cmd, args, Discord){
             -mouthwash (mouthwash)
             -rickrolled (don't)
             -trumpmeme (displays a trump meme)
+            -meme (displays a random meme)
+            -fight (fight a user)
 
             **Games**
             -rps (a rock paper scissors game)
             -roll (rolls a die)
             
+            **Anime Stuff**
+            -pat (pat a user)
+            -poke (poke a user)
+
             **Misc. commands**
             -invite (sends a link for the bot invite)
             -commandlist (lists the commands for the bot)
@@ -35,6 +41,11 @@ execute(client, message, cmd, args, Discord){
             -ping (shows the bots ping info)
             -serverinfo (displays some info about the server)
             -userinfo (displays a users information)
+            -avatar (displays a users avatar)
+            -ChaosBot (displays basic info about the bot)
+            -perms (displays perms for users)
+            -steam (display a steam game)
+            -wikipedia (display stuff from wikipedia)
             -weather (displays weather for a state or city)`); 
 
         message.channel.send(embed)              
