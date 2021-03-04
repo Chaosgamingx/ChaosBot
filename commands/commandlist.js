@@ -45,7 +45,7 @@ execute(client, message, cmd, args, Discord){
             -ChaosBot (displays basic info about the bot)
             -perms (displays perms for users)
             -steam (display a steam game)
-            -wikipedia (display stuff from wikipedia)
+            -wiki (display stuff from wikipedia)
             -weather (displays weather for a state or city)`); 
 
         message.channel.send(embed)              
