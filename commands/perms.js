@@ -25,8 +25,8 @@ module.exports = { // Update To Your Handler
             }
 
             // Executing
-            const yes = '<:white_check_mark:>';
-            const no = '<:octagonal_sign:>';
+            const yes = '<:approve:770539375133851658>';
+            const no = '<:denied:770539375103574016>';
 
             if (infoMem.hasPermission('ADMINISTRATOR')) {
               const embed = new Discord.MessageEmbed();

@@ -17,8 +17,7 @@ execute(client, message, cmd, args, Discord){
             play (plays a song)
             skip (skips the song that's playing)
             disconnect (disconnects the bot from VC)
-            search (display a song on youtube)
-
+            search (pulls up a youtube video)
             
             **Meme commands**
             bidoof (pokemon)
@@ -27,7 +26,7 @@ execute(client, message, cmd, args, Discord){
             trumpmeme (displays a trump meme)
             meme (displays a random meme)
             fight (fight a user)
-            tableflip (shows a VERY fast table flip)
+            tableflip (flip a table at fast speeds)
 
             **Games**
             rps (a rock paper scissors game)
@@ -38,7 +37,6 @@ execute(client, message, cmd, args, Discord){
             poke (poke a user)
 
             **Misc. commands**
-<<<<<<< HEAD
             invite (sends a link for the bot invite)
             commandlist (lists the commands for the bot)
             reminder (set a reminder from discord)
@@ -51,20 +49,6 @@ execute(client, message, cmd, args, Discord){
             steam (display a steam game)
             wikipedia (display stuff from wikipedia)
             weather (displays weather for a state or city)`); 
-=======
-            -invite (sends a link for the bot invite)
-            -commandlist (lists the commands for the bot)
-            -reminder (set a reminder from discord)
-            -ping (shows the bots ping info)
-            -serverinfo (displays some info about the server)
-            -userinfo (displays a users information)
-            -avatar (displays a users avatar)
-            -ChaosBot (displays basic info about the bot)
-            -perms (displays perms for users)
-            -steam (display a steam game)
-            -wiki (display stuff from wikipedia)
-            -weather (displays weather for a state or city)`); 
->>>>>>> 9193afe2c22f368e44fb7aa32ab003aedd02ca47
 
         message.channel.send(embed)              
     }
