@@ -18,6 +18,10 @@ execute(client, message, cmd, args, Discord){
             skip (skips the song that's playing)
             disconnect (disconnects the bot from VC)
             search (pulls up a youtube video)
+            nowplaying (displays the currently playing song)
+            queue (displays the servers current queue)
+            resume (resume a song that's paused)
+            pause (pause a song that's playing)
             
             **Meme commands**
             bidoof (pokemon)
