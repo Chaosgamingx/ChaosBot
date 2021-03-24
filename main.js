@@ -10,4 +10,4 @@ client.events = new Discord.Collection();
 })
 
 
-client.login(process.env.NEW_TOKEN);
+client.login(process.env.chaosbackup);
