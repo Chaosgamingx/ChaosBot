@@ -52,8 +52,8 @@ execute(client, message, cmd, args, Discord){
             perms (displays perms for users)
             steam (display a steam game)
             wikipedia (display stuff from wikipedia)
-            weather (displays weather for a state or city)`); 
-            servercount (displays how many servers the bot is in)
+            weather (displays weather for a state or city)
+            servercount (displays how many servers the bot is in)`); 
 
         message.channel.send(embed)              
     }
