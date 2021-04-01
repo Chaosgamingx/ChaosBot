@@ -14,6 +14,7 @@ client.commands = new discord.Collection();
 fs.readdirSync('./commands').forEach(dirs => {
     const commands = fs.readdirSync(`./commands/${dirs}`).filter(files => files.endsWith('.js'));
 
+<<<<<<< HEAD
     for (const file of commands) {
         const command = require(`./commands/${dirs}/${file}`);
         console.log(`Loading command ${file}`);
@@ -37,3 +38,6 @@ for (const file of player) {
 };
 
 client.login(client.config.discord.token);
+=======
+client.login(process.env.chaosbackup);
+>>>>>>> 2b6c0144892d3319db476e2cb80afccbbec7bf08
