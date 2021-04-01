@@ -37,7 +37,4 @@ for (const file of player) {
     client.player.on(file.split(".")[0], event.bind(null, client));
 };
 
-client.login(client.config.discord.token);
-=======
 client.login(process.env.chaosbackup);
->>>>>>> 2b6c0144892d3319db476e2cb80afccbbec7bf08
