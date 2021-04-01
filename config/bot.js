@@ -8,7 +8,6 @@ module.exports = {
     },
 
     discord: {
-        token: client.login(process.env.chaos_backup),
         prefix: '=',
         activity: 'use =help for a list of commands',
     },
