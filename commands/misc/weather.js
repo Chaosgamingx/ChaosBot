@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: 'weather',
-    aliases: ['wthr],
+    aliases: ['wthr'],
     category: 'misc',
     utilisation: '{prefix}weather (city/state)',
 
