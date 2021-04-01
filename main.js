@@ -36,5 +36,3 @@ for (const file of player) {
     const event = require(`./player/${file}`);
     client.player.on(file.split(".")[0], event.bind(null, client));
 };
-
-client.login(process.env.chaos_backup);
