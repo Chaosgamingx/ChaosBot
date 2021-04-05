@@ -3,8 +3,9 @@ const fetch = require("node-fetch");
 
 module.exports = {
     name: 'pat',
-    aliases: [''],
+    aliases: [],
     category: 'anime',
+    utilisation: '{prefix}pat (user)',
     description: "pat a person",
 
     async execute(client, message, args) {
