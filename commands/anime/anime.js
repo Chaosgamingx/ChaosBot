@@ -5,6 +5,7 @@ module.exports = {
     name: 'anime',
     aliases: ['a'],
     category: 'anime',
+    utilisation: '{prefix}anime (show) <season number>',
     description: "shows info on an anime series",
 
   async execute(client, message, args) {
