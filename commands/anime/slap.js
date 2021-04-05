@@ -2,18 +2,18 @@ const Discord = require('discord.js')
 const fetch = require("node-fetch");
 
 module.exports = {
-  name: 'poke',
+  name: 'slap',
   aliases: [''],
   category: 'anime',
-    description: "poke a person",
+    description: "slap a person",
 
   async execute(client, message, args) {
-    const body = await fetch(`https://nekos.life/api/v2/img/poke`)
+    const body = await fetch(`https://nekos.life/api/v2/img/slap`)
       .then((r) => r.json());
 
 
 
-      if (message.mentions.users.size < 1) return message.channel.send("you need to mention somebody to poke");
+      if (message.mentions.users.size < 1) return message.channel.send("you need to mention somebody to slap");
 
         let user = message.guild.member(message.mentions.users.first());
 
