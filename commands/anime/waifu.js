@@ -1,7 +1,8 @@
 module.exports = {
     name: 'waifu',
-    aliases: [''],
+    aliases: [],
     category: 'anime',
+    utilisation: '{prefix}waifu',
     description: "why even describe this, displays a waifu",
 
     execute(client, message, args) {
