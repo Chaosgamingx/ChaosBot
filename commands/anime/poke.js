@@ -3,8 +3,9 @@ const fetch = require("node-fetch");
 
 module.exports = {
   name: 'poke',
-  aliases: [''],
+  aliases: [],
   category: 'anime',
+  utilisation: '{prefix}poke (user)',
     description: "poke a person",
 
   async execute(client, message, args) {
