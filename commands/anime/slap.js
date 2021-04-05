@@ -3,8 +3,9 @@ const fetch = require("node-fetch");
 
 module.exports = {
   name: 'slap',
-  aliases: [''],
+  aliases: [],
   category: 'anime',
+  utilisation: '{prefix}slap (user)',
     description: "slap a person",
 
   async execute(client, message, args) {
