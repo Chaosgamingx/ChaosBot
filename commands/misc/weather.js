@@ -6,9 +6,9 @@ module.exports = {
     name: 'weather',
     aliases: ['wthr'],
     category: 'misc',
-    utilisation: '{prefix}weather (city/state)',
+    utilisation: '{prefix}weather <city/state>',
 
-    async execute(client, message, cmd, args, Discord) {
+    async execute(client, message, args) {
     
         weather.find({search: args.join(" "), degreeType: 'C'}, function (error, result){
         // 'C' can be changed to 'F' for farneheit results
@@ -39,3 +39,4 @@ module.exports = {
         })        
     }
 }
+
