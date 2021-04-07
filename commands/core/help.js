@@ -17,7 +17,7 @@ module.exports = {
             message.channel.send({
                 embed: {
                     color: 'RANDOM',
-                    author: { name: 'Help pannel' },
+                    author: { name: 'Help panel' },
                     footer: { text: 'This bot uses a github project made by chaosgamingx.' },
                     fields: [
                         { name: 'Bot', value: infos },
@@ -42,7 +42,7 @@ module.exports = {
             message.channel.send({
                 embed: {
                     color: 'RANDOM',
-                    author: { name: 'Help pannel' },
+                    author: { name: 'Help panel' },
                     footer: { text: 'This bot uses a Github project made by chaosgamingx.' },
                     fields: [
                         { name: 'Name', value: command.name, inline: true },
