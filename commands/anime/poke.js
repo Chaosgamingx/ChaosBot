@@ -19,7 +19,7 @@ module.exports = {
         let user = message.guild.member(message.mentions.users.first());
 
 
-        message.channel.send(`${user} You got pat from ${message.author.username}`)
+        message.channel.send(`${user} You got poked from ${message.author.username}`)
         const embed = new Discord.MessageEmbed()
             .setColor("RANDOM")
             .setImage(body.url)
