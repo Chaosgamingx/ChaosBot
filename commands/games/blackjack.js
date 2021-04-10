@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const Deck = require('../../model/Deck');
+const Deck = require('../../model/deck.js');
 
 module.exports = {
     "name": "blackjack",
