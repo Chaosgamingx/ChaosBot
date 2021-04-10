@@ -1,4 +1,4 @@
-const Card = require('./Card.js');
+const Card = require('./card.js');
 module.exports = class Deck {
   constructor(numDecks) {
     if(!Number.isInteger(numDecks)){
