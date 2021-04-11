@@ -36,6 +36,7 @@ for (const file of player) {
     const event = require(`./player/${file}`);
     client.player.on(file.split(".")[0], event.bind(null, client));
 };
+<<<<<<< HEAD
 
 client.once('ready', () => {
 	console.log('Ready!');
@@ -91,3 +92,6 @@ client.on('guildMemberAdd', async member => {
 });
 
 client.login(process.env.chaosbackup);
+=======
+client.login(process.env.chaos_backup)
+>>>>>>> c4c33d33076e0cb86ffd20f1b54f2365ef2043ef
