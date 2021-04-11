@@ -4,9 +4,9 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: 'weather',
-    aliases: [],
+    aliases: ['wthr'],
     category: 'misc',
-    utilisation: '{prefix}weather (city/state)',
+    utilisation: '{prefix}weather <city/state>',
 
     async execute(client, message, args) {
     
@@ -39,3 +39,4 @@ module.exports = {
         })        
     }
 }
+
