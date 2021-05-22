@@ -1,7 +1,7 @@
 module.exports = {
     name: 'bonk',
     aliases: [],
-    category: 'meme',
+    category: 'memes',
     utilisation: '{prefix}bonk',
 
     execute(client, message, args) {
