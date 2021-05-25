@@ -36,4 +36,4 @@ for (const file of player) {
     client.player.on(file.split(".")[0], event.bind(null, client));
 };
 
-client.login(process.env.NEW_TOKEN);
+client.login(process.env.yeet;
