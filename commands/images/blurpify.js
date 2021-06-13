@@ -7,7 +7,6 @@ module.exports = {
         name: 'blurpify',
         description: 'Blurpify a picture!',
         category: 'images',
-        cooldown: 5,
 
     async execute(client, message, args) {
       let user = message.mentions.users.first() || client.users.cache.get(args[0]) || match(args.join(" ").toLowerCase(), message.guild) || message.author;
