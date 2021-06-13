@@ -9,7 +9,6 @@ module.exports = {
         category: 'images',
         usage: '<text>',
         examples: [ 'clyde hey discord!' ],
-        cooldown: 5,
 
     async execute(client, message, args) {
 
