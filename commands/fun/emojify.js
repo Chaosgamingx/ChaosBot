@@ -23,7 +23,6 @@ module.exports = {
         description: 'Emojifies the given text.',
         category: 'fun',
         examples: [ 'emojify POG! '],
-        cooldown: 3,
 
     async execute(client, message, args) {
     
