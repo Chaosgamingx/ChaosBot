@@ -7,7 +7,6 @@ module.exports = {
         aliases: [ 'catfacts', 'cf' ],
         description: 'Generate a random useless cat facts',
         category: 'fun',
-        cooldown: 3,
 
     async execute(client, message, args) {
   
