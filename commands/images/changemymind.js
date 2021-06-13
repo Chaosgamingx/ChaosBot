@@ -10,7 +10,6 @@ module.exports = {
         category: 'images',
         usage: '<text>',
         examples: [ 'changemymind Poggers' ],
-        cooldown: 5,
 
     async execute(client, message, args) {
 
