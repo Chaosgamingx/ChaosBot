@@ -1,0 +1,25 @@
+
+const fetch = require('node-fetch');
+const Guild = require('../../database/schemas/Guild');
+const Discord = require('discord.js');
+module.exports = {
+        name: 'dogfact',
+        aliases: ['df'],
+        description: 'Generate a random useless dog facts',
+        category: 'fun',
+        cooldown: 3,
+
+    async execute(client, message, args) {
+  
+      const res = await fetch('https://dog-api.kinduff.com/api/facts');
+      const fact = (await res.json()).facts[0];
+
+      const embed = new Discord.MessageEmbed()
+        .setDescription(fact)
+        .setFooter(`/dog-api.kinduff/api/fact`)
+        .setTimestamp()
+        .setColor(client.color);
+      message.channel.send(embed).catch(() => {});
+
+    }
+};

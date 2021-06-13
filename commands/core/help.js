@@ -13,6 +13,8 @@ module.exports = {
             const memes = message.client.commands.filter(x => x.category == 'memes').map((x) => '`' + x.name + '`').join(', ');
             const misc = message.client.commands.filter(x => x.category == 'misc').map((x) => '`' + x.name + '`').join(', ');
             const moderator = message.client.commands.filter(x => x.category == 'moderator').map((x) => '`' + x.name + '`').join(', ');
+            const fun = message.client.commands.filter(x => x.category == 'fun').map((x) => '`' + x.name + '`').join(', ');
+            const images = message.client.commands.filter(x => x.category == 'images').map((x) => '`' + x.name + '`').join(', ');
 
             message.channel.send({
                 embed: {
@@ -27,6 +29,8 @@ module.exports = {
                         { name: 'Memes', value: memes},
                         { name: 'Misc', value: misc},
                         { name: 'Moderator', value: moderator},
+                        { name: 'Fun', value: fun },
+                        { name: 'Images', value: images },
 
                         { name: 'Filters', value: client.filters.map((x) => '`' + x + '`').join(', ') },
                     ],

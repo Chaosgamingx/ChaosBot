@@ -3,6 +3,7 @@ const discord = require('discord.js');
 
 const client = new discord.Client();
 
+
 const { Player } = require('discord-player');
 
 client.player = new Player(client);
@@ -10,6 +11,7 @@ client.config = require('./config/bot');
 client.emotes = client.config.emojis;
 client.filters = client.config.filters;
 client.commands = new discord.Collection();
+
 
 fs.readdirSync('./commands').forEach(dirs => {
     const commands = fs.readdirSync(`./commands/${dirs}`).filter(files => files.endsWith('.js'));
@@ -36,4 +38,4 @@ for (const file of player) {
     client.player.on(file.split(".")[0], event.bind(null, client));
 };
 
-client.login(process.env.yeet);
+client.login(process.env.NEW_TOKEN);
