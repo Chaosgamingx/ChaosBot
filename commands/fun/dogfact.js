@@ -7,7 +7,6 @@ module.exports = {
         aliases: ['df'],
         description: 'Generate a random useless dog facts',
         category: 'fun',
-        cooldown: 3,
 
     async execute(client, message, args) {
   
