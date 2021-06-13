@@ -7,7 +7,6 @@ module.exports = {
         name: 'cat',
         description: 'Get a cat picture!',
         category: 'images',
-        cooldown: 5,
     
     
 
