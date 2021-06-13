@@ -6,7 +6,6 @@ module.exports = {
     name: 'f',
     description: 'Pay your respect!',
     category: 'fun',
-    cooldown: 3,
 
     async execute(client, message, args) {
 
