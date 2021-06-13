@@ -7,7 +7,6 @@ module.exports = {
   name: 'bird',
   description: 'Get a bird picture!',
   category: 'images',
-  cooldown: 5,
 
   async execute(client, message, args) {
     
