@@ -7,7 +7,6 @@ module.exports = {
         name: 'iphonex',
         description: 'Make someone fit in an iphonex!',
         category: 'images',
-        cooldown: 5,
 
     async execute(client, message, args) {
 
