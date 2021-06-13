@@ -12,8 +12,6 @@ module.exports = {
         category: 'images',
         usage: '<text>',
         examples: [ 'imposter Koni' ],
-        cooldown: 5,
-        guildOnly: true,
 
     async execute(client, message, args) {
 
