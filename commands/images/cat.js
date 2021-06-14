@@ -19,7 +19,6 @@ module.exports = {
             .setImage(img)
             .setFooter(`/api.thecatapi.com/v1/images/search`)
             .setTimestamp()
-            .setColor(client.color.blue)
           message.channel.send(embed);
         } catch (err) {
          console.log(`${err}, command name: cat`)
