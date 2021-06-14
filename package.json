@@ -11,9 +11,9 @@
   "dependencies": {
     "common-tags": "^1.8.0",
     "discord-player": "^3.4.0",
-    "discord.js": "^12.5.1",
-    "discord.js-commando": "^0.12.2",
-    "ffmpeg-static": "^4.2.7",
+    "discord.js": "^12.5.3",
+    "discord.js-commando": "^0.12.3",
+    "ffmpeg-static": "^4.3.0",
     "fs": "0.0.1-security",
     "git": "^0.1.5",
     "got": "^11.8.2",
