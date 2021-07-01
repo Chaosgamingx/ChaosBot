@@ -1,5 +1,4 @@
 
-const Guild = require('../../database/schemas/Guild');
 const specialCodes = {
   '0': ':zero:',
   '1': ':one:',

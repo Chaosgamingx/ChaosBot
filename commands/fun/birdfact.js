@@ -1,6 +1,5 @@
 
 const fetch = require('node-fetch');
-const Guild = require('../../database/schemas/Guild');
 const Discord = require('discord.js');
 module.exports = {
   name: 'birdfact',

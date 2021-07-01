@@ -1,6 +1,5 @@
 
 const fetch = require('node-fetch');
-const Guild = require('../../database/schemas/Guild');
 const { MessageEmbed } = require('discord.js');
 module.exports = {
         name: 'catfact',

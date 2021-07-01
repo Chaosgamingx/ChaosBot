@@ -1,5 +1,4 @@
 const discord = require("discord.js")
-const Guild = require('../../database/schemas/Guild');
 module.exports = {
         name: 'reverse',
         aliases: [ 'rev' ],
