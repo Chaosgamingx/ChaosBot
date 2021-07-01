@@ -1,6 +1,5 @@
 
 const fetch = require('node-fetch');
-const Guild = require('../../database/schemas/Guild');
 const discord = require('discord.js');
 const request = require('request-promise-native');
 
