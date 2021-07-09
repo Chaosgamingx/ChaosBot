@@ -2,6 +2,7 @@ const fs = require('fs');
 const discord = require('discord.js');
 
 const client = new discord.Client();
+client.options.http.api = "https://discord.com/api"
 
 
 const { Player } = require('discord-player');
