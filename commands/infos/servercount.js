@@ -10,7 +10,7 @@ module.exports = {
 
         const serverembed = new Discord.MessageEmbed()
         .setTitle ('Server count')
-        .setDescription (`Chaosbot is in ${client.guilds.cache.size} servers`)
+        .setDescription (`Chaosbot is in ${client.guilds.cache.size} servers with a total of ${client.users.cache.size} users`)
         .setColor ('RANDOM')
         .setTimestamp()
         message.channel.send(serverembed)
