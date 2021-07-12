@@ -17,16 +17,34 @@ module.exports = {
         let currentpage = 0;
 
         const messageFilter = m => m.author.id === message.author.id;
+        const reactionFilter = (reaction, user) => ['⬅️', '➡️'].includes(reaction.emoji.name) && (message.author.id === user.id)
 
         message.channel.send("please enter the song name now (dont use =lyrics for this part)");
         await message.channel.awaitMessages(messageFilter, { max: 1, time: 15000 }).then(async collected => {
             songname = collected.first().content;
             await finder(artist, songname, message, pages)
-        }).catch(error => {message.channel.send("failed to type a song name in 15 seconds")});
-        
+        }).catch(error => { message.channel.send("failed to type a song name in 15 seconds") });
+
         const lyricEmbed = await message.channel.send(`Lyrics page: ${currentpage + 1}/${pages.length}`, pages[currentpage])
+        await lyricEmbed.react("⬅️");
+        await lyricEmbed.react("➡️");
 
+        const collector = lyricEmbed.createReactionCollector(reactionFilter);
 
+        collector.on('collect', (reaction, user) => {
+            if(reaction.emoji.name === '➡️'){
+                if(currentpage < pages.length-1){
+                    currentpage+=1;
+                    lyricEmbed.edit(`Lyrics page: ${currentpage+1}/${pages.length}`, pages[currentpage])
+                }
+            }else if(reaction.emoji.name === '⬅️'){
+                if (currentpage !== 0){
+                    currentpage -= 1;
+                    lyricEmbed.edit(`Lyrics Page: ${currentpage+1}/${pages.length}`, pages[currentpage])
+                }
+            };
+
+        })
     }
 }
 
