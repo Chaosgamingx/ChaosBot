@@ -11,10 +11,6 @@ module.exports = {
 
     async execute(client, message, args) {
 
-       
-
-        if(!message.member.roles.cache.find(r => r.name === "yo the mama")) return message.channel.send("you don't have the `your the mama` role applied");
-
         const body = await fetch(`https://api.yomomma.info`)
             .then((r) => r.json());
 
