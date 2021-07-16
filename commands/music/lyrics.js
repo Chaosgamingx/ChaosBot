@@ -4,7 +4,7 @@ const lyricsfinder = require("lyrics-finder");
 module.exports = {
     name: 'lyrics',
     aliases: [],
-    category: 'music',
+    category: 'Music',
     utilisation: '{prefix}lyrics (author)',
 
     async execute(client, message, args) {
