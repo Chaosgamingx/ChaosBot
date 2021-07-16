@@ -71,7 +71,7 @@ module.exports = {
                     .setFooter(client.user.username, client.user.avatarURL)
                 for (var stn in radio) {
                     stnName = radio[stn].name
-                    cmd = "!play " + radio[stn].alias
+                    cmd = "=play " + radio[stn].alias
                     pEmbed.addField('Listen to ' + stnName, cmd)
                 }
                 message.channel.send(pEmbed)
