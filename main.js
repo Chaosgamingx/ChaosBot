@@ -38,6 +38,4 @@ for (const file of player) {
     const event = require(`./player/${file}`);
     client.player.on(file.split(".")[0], event.bind(null, client));
 };
-
-    client.login("ODA2OTk3OTk1MTIzNTA3MjUx.YBxlcw.xjTbUPUuixiotf2YffNUS3S8yaU")
-//client.login(process.env.yeet);
+client.login(process.env.yeet);
