@@ -39,4 +39,5 @@ for (const file of player) {
     client.player.on(file.split(".")[0], event.bind(null, client));
 };
 
-client.login(process.env.yeet);
+    client.login("ODA2OTk3OTk1MTIzNTA3MjUx.YBxlcw.xjTbUPUuixiotf2YffNUS3S8yaU")
+//client.login(process.env.yeet);

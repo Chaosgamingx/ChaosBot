@@ -8,7 +8,7 @@ module.exports = {
     },
 
     discord: {
-        prefix: '=',
+        prefix: '!',
         activity: 'use =help for a list of commands',
     },
 
