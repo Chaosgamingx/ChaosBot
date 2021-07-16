@@ -5,7 +5,7 @@ const fetch = require("node-fetch");
 module.exports = {
     name: 'yomama',
     aliases: [],
-    category: 'anime',
+    category: 'memes',
     utilisation: '{prefix}yomama',
     description: "display a yomama joke",
 
