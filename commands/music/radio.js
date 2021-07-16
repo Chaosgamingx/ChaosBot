@@ -8,7 +8,7 @@ const { Application } = require("opusscript")
 module.exports = {
     name: 'radio',
     aliases: [],
-    category: 'music',
+    category: 'Music',
     utilisation: '{prefix}radio (station)',
 
     async execute(client, message, args) {
