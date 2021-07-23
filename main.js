@@ -38,4 +38,23 @@ for (const file of player) {
     const event = require(`./player/${file}`);
     client.player.on(file.split(".")[0], event.bind(null, client));
 };
+
+client.on('guildCreate', (guild) => {
+	let channelToSend;
+
+	guild.channels.cache.forEach((channel) => {
+		if (channel.type === "text" && !channelToSend && channel.permissionsFor(guild.me).has("SEND_MESSAGES")
+		) channelToSend = channel;
+	});
+	if (!channelToSend) return;
+
+	const embed = new discord.MessageEmbed()
+		.setColor("RANDOM")
+		.addField("Thanks for inviting ChaosBot to your server!", "If you have any questions about ChaosBot, feel free to ask in the official ChaosBot server [here](https://discord.gg/PRzWKj4dBy)")
+		.addField("If you want to add ChaosBot to your server", "than click [here](https://discord.com/oauth2/authorize?client_id=530267263501074443&scope=bot&permissions=2147483647)")
+		.setThumbnail(client.user.avatar)
+		.setTimestamp()
+	channelToSend.send(embed)
+})
+
 client.login(process.env.yeet);
