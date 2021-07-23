@@ -50,7 +50,7 @@ client.on('guildCreate', (guild) => {
 
 	const embed = new discord.MessageEmbed()
 		.setColor("RANDOM")
-		.addField("Thanks for inviting ChaosBot to your server!", "If you have any questions about ChaosBot, feel free to ask in the official ChaosBot server [here](https://discord.gg/PRzWKj4dBy)")
+		.addField("Thanks for inviting ChaosBot to your server! my prefix is `=`", "If you have any questions about ChaosBot, feel free to ask in the official ChaosBot server [here](https://discord.gg/PRzWKj4dBy)")
 		.addField("If you want to add ChaosBot to your server", "than click [here](https://discord.com/oauth2/authorize?client_id=530267263501074443&scope=bot&permissions=2147483647)")
 		.setThumbnail(client.user.avatar)
 		.setTimestamp()
