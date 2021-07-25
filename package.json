@@ -21,6 +21,7 @@
     "lyrics-finder": "^21.7.0",
     "mime": "^2.5.2",
     "moment": "^2.29.1",
+    "mongoose": "^5.13.3",
     "ms": "^2.1.3",
     "node-superfetch": "^0.1.11",
     "node.js": "0.0.1-security",
@@ -28,7 +29,7 @@
     "request-promise-native": "^1.0.9",
     "snekfetch": "^4.0.4",
     "weather-js": "^2.0.0",
-    "ytdl-core": "^4.8.3",
+    "ytdl-core": "^4.9.0",
     "ytsearch": "^1.0.4"
   }
 }

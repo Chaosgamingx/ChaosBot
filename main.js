@@ -1,5 +1,6 @@
 const fs = require('fs');
 const discord = require('discord.js');
+const mongoose = require('mongoose')
 
 const client = new discord.Client();
 client.options.http.api = "https://discord.com/api"
@@ -54,6 +55,17 @@ client.on('guildCreate', (guild) => {
 		.addField("If you want to add ChaosBot to your server", "than click [here](https://discord.com/oauth2/authorize?client_id=530267263501074443&scope=bot&permissions=2147483647)")
 		.setTimestamp()
 	channelToSend.send(embed)
+})
+
+mongoose.connect("mongodb+srv://chaosbot:YNwYIrA0Putfm9gs@chaoscluster.8hndj.mongodb.net/ChaosBotDB?retryWrites=true&w=majority", {
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+	useFindAndModify:  false,
+	useCreateIndex: true
+}).then(()=>{
+	console.log("connected to mongo")
+}).catch((err) => {
+	console.log(err);
 })
 
 client.login(process.env.yeet);

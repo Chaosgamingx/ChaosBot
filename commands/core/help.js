@@ -15,6 +15,7 @@ module.exports = {
             const moderator = message.client.commands.filter(x => x.category == 'moderator').map((x) => '`' + x.name + '`').join(', ');
             const fun = message.client.commands.filter(x => x.category == 'fun').map((x) => '`' + x.name + '`').join(', ');
             const images = message.client.commands.filter(x => x.category == 'images').map((x) => '`' + x.name + '`').join(', ');
+            const economy = message.client.commands.filter(x => x.category == 'economy').map((x) => '`' + x.name + '`').join(', ');
 
             message.channel.send({
                 embed: {
@@ -31,6 +32,7 @@ module.exports = {
                         { name: 'Moderator', value: moderator},
                         { name: 'Fun', value: fun },
                         { name: 'Images', value: images },
+                        {name: 'Economy', value: economy},
 
                         { name: 'Filters', value: client.filters.map((x) => '`' + x + '`').join(', ') },
                     ],
