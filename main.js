@@ -57,7 +57,7 @@ client.on('guildCreate', (guild) => {
 	channelToSend.send(embed)
 })
 
-mongoose.connect("mongodb+srv://chaosbot:YNwYIrA0Putfm9gs@chaoscluster.8hndj.mongodb.net/ChaosBotDB?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGODB_URI, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 	useFindAndModify:  false,
@@ -68,4 +68,4 @@ mongoose.connect("mongodb+srv://chaosbot:YNwYIrA0Putfm9gs@chaoscluster.8hndj.mon
 	console.log(err);
 })
 
-client.login(process.env.yeet);
+client.login(process.env.yeets);
