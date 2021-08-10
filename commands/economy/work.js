@@ -3,13 +3,13 @@ const Discord = require('discord.js')
 const talkedRecently = new Set();
 
 module.exports = {
-    name: 'beg',
+    name: 'work',
     aliases: [],
     category: 'economy',
     utilisation: '{prefix}help <command name>',
 
     async execute(client, message, args) {
-        const randomNumber = Math.floor(Math.random() * 500) + 1;
+        const randomNumber = Math.floor(Math.random() * 1250) + 1;
         let profileData = await profileModel.findOne({ userID: message.author.id });
         if (!profileData) {
             let profile = await profileModel.create({
@@ -31,27 +31,10 @@ module.exports = {
 
                 let convstring = Number(randomNumber)
 
-                const failorsuccess = ['Success', 'Failed']
-                let failrand = Math.floor((Math.random() * failorsuccess.length))
-                let failss = failorsuccess[failrand]
-
-                //the beg money givers
-                const beggiver = [`Dwayne Johnson`, `Selena Gomez`, `Justin Bieber`, `Rick Astley`, `Alan Walker`, `Random Stranger`,]
-                let begresultgive = Math.floor((Math.random() * beggiver.length))
-                let beggive = beggiver[begresultgive]
-
                 // description when you use beg command
-                const begdescription = [`You little poor beggar. here take **$${convstring} Chaos credits**`, `Here take **$${convstring} Chaos credits** and invest it.`, `Aw man i only got $30 in my wallet.. I can give you **$${convstring} Chaos credits**`]
+                const begdescription = [`You Worked in a Pizza Shop and got paid **${convstring} Chaos credits**`, `You stole someones wallet and got **${convstring} Chaos credits**`, `You worked as a Taxi driver and revieved **${convstring} Chaos credits**`, `You worked a double shift and earned **${convstring} Chaos credits**`, `You worked at a Gas Station and got **${convstring} Chaos credits**`, `You were in the Coal Mines and made **${convstring} Chaos credits**`, `You  found **${convstring} Chaos credits** in your car`]
                 let begresultdesc = Math.floor((Math.random() * begdescription.length))
                 let begres = begdescription[begresultdesc]
-
-                // description when you failed at begging
-                const beggingfail = ['Get a job man', "kekw here's $200 ||sike||", 'get out of my sight', 'go ask your momma', 'ask someone else', 'go ask somewhere else', 'you failed to recieve money from someone']
-                let failbegrand = Math.floor((Math.random() * beggingfail.length))
-                let failbeg = beggingfail[failbegrand]
-
-
-                if (failss === 'Success') {
 
                     const response = await profileModel.findOneAndUpdate({
                         userID: message.author.id,
@@ -61,7 +44,6 @@ module.exports = {
                         }
                     })
                     const begembed = new Discord.MessageEmbed()
-                        .setTitle(`${beggive}`)
                         .setDescription(`${begres}`)
                         .setColor("#fcba03")
                         .setTimestamp(Date.now())
@@ -69,17 +51,7 @@ module.exports = {
                     //send the begembed in channel
                     message.channel.send(begembed)
 
-                } else if (failss === 'Failed') {
-
-                    const failembed = new Discord.MessageEmbed()
-                        .setTitle(`**${beggive}**`)
-                        .setDescription(`**${failbeg}`)
-                        .setColor("#fcba03")
-                        .setTimestamp(Date.now())
-
-                    //send the failembed in channel
-                    message.channel.send(failembed)
-                }
+                
                 talkedRecently.add(message.author.id);
                 setTimeout(() => {
                     // Removes the user from the set after a minute
