@@ -33,10 +33,10 @@ module.exports = {
                 if (stolenfrom) (console.log(stolenfrom.id))
 
                 let person = await profileModel.findOne({ userID: stolenfrom.id });
-
+                let amount = Number(1250)
 
                 if (!person) return message.channel.send("That person isn't in my database")
-                if (person.coin === 0) return message.channel.send("this person can't be stolen from as they have **0 Chaos Credits**")
+                if (person.coin < amount) return message.channel.send("this person can't be stolen from as they have less than **1250 Chaos Credits**")
 
                 let convstring = Number(randomNumber)
 
