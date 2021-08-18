@@ -5,6 +5,7 @@ let profileSchema = new mongoose.Schema({
     serverID: { type: String, require: true },
     coin: { type: Number, default: 1000 },
     bank: { type: Number },
+    items: { type: Array, require: false, default: [] },
 })
 
 const model = mongoose.model('profileModels', profileSchema);
