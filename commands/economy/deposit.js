@@ -20,7 +20,7 @@ module.exports = {
             message.channel.send("I have added you to the database, try again")
         } else {
 
-            if (args[0] = "all", "All") {
+            if (args[0] == "all") {
                 await profileModel.findOneAndUpdate({
                     userID: message.author.id
                 }, {
@@ -34,7 +34,7 @@ module.exports = {
             } else {
 
                 const amount = args[0]
-                if (amount % 1 != 0 || amount <= 0) return message.channel.send("Deposit amount must be a whole number");
+                if (amount % 1 != 0 || amount <= 0) return message.channel.send("Deposit amount must be a whole number or `all`");
                 try {
                     if (amount > profileData.coin) return message.channel.send("you don't have that amount of coins to deposit");
                     await profileModel.findOneAndUpdate({
