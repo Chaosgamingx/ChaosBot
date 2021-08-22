@@ -77,7 +77,7 @@ module.exports = {
                     .setColor('YELLOW')
                     .setThumbnail(member.user.displayAvatarURL({ format: 'png', size: 256, dynamic: true }))
                     .setFooter("https://top.gg/bot/530267263501074443/vote")
-                    .setDescription(`Gamble | Player : **${member.user.username}** \n\nChaosBot rolled: \`${botRoll}\` \n${member.user.username} rolled: \`${userChoice}\`\n\n**${member.user.username}** & **Hydra+**:Tied\n\nLost: **${tieCoins.toLocaleString()}** coins`)
+                    .setDescription(`Gamble | Player : **${member.user.username}** \n\nChaosBot rolled: \`${botRoll}\` \n${member.user.username} rolled: \`${userChoice}\`\n\n**${member.user.username}** & **ChaosBot**:Tied\n\nLost: **${tieCoins.toLocaleString()}** coins`)
                 message.channel.send(tieEmbed);
             } else if (botRoll > userChoice) {
                 const lostCoins = (betAmount);

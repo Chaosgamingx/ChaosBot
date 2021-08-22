@@ -20,22 +20,36 @@ module.exports = {
             message.channel.send("I have added you to the database, try again")
         } else {
 
-            const amount = args[0]
-            if (amount % 1 != 0 || amount <= 0) return message.channel.send("Deposit amount must be a whole number");
-            try {
-                if (amount > profileData.coin) return message.channel.send("you don't have that amount of coins to deposit");
+            if (args[0] = "all", "All") {
                 await profileModel.findOneAndUpdate({
                     userID: message.author.id
                 }, {
                     $inc: {
-                        coin: -amount,
-                        bank: amount
+                        coin: -profileData.coin,
+                        bank: profileData.coin
                     }
                 }
                 )
-                return message.channel.send(`Deposited ${amount} of coins into your bank`)
-            } catch (err) {
-                console.log(err)
+                return message.channel.send(`Deposited ${profileData.coin} coins into your bank`)
+            } else {
+
+                const amount = args[0]
+                if (amount % 1 != 0 || amount <= 0) return message.channel.send("Deposit amount must be a whole number");
+                try {
+                    if (amount > profileData.coin) return message.channel.send("you don't have that amount of coins to deposit");
+                    await profileModel.findOneAndUpdate({
+                        userID: message.author.id
+                    }, {
+                        $inc: {
+                            coin: -amount,
+                            bank: amount
+                        }
+                    }
+                    )
+                    return message.channel.send(`Deposited ${amount} coins into your bank`)
+                } catch (err) {
+                    console.log(err)
+                }
             }
         }
     }
