@@ -59,7 +59,7 @@ module.exports = {
                 return message.channel.send(coinmin);
             }
 
-            // ** BEGIN Javascript blackjack game from echohatch1. Modified for Grape.
+          
 
             var numCardsPulled = 0;
             var gameOver = false;
@@ -249,7 +249,7 @@ module.exports = {
             }
 
             function hit() {
-                player.cards.push(deck.deckArray[numCardsPulled]);  // END Javascript blackjack game from echohatch1. Modified by Brandon-The-Dev for Hydra+
+                player.cards.push(deck.deckArray[numCardsPulled]);
                 player.score = getCardsValue(player.cards);
 
                 numCardsPulled += 1;
