@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 module.exports = {
     name: "tts",
     description: "text to speech",
-    category: 'economy',
+    category: 'misc',
 
 
     execute(client, message, args) {
