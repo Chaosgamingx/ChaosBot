@@ -1,7 +1,7 @@
 const profileModel = require('../../models/profileSchema')
 const talkedRecently = new Set();
 const itemss = require('../../models/items');
-const {MessageEmbed} = require('discord.js')
+const { MessageEmbed } = require('discord.js')
 const x = '❌'
 module.exports = {
     name: 'chop',
@@ -41,7 +41,12 @@ module.exports = {
                 } else {
 
                     const treeAmount = Math.round(Math.random() * 1) + 1;
-                    message.channel.send(`You went into the woods and chopped down **${treeAmount}** x Tree 🌲`);
+
+                    const chopembed = new MessageEmbed()
+                        .setDescription(`You went into the woods and chopped down **${treeAmount}** x Tree 🌲`)
+                        .setColor("GREEN")
+                    message.channel.send(chopembed);
+                    
                     const findItem = profileData.items.find(i => i.name.toLowerCase() == 'tree');
                     let userInv = profileData.items.filter(i => i.name.toLowerCase() !== 'tree');
                     if (findItem) {
