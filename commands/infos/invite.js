@@ -1,18 +1,23 @@
+const buttons = require("discord-buttons")
 const Discord = require('discord.js')
-
 module.exports = {
-    name: 'invite',
-    aliases: [],
-    category: 'infos',
-    utilisation: '{prefix}invite',
+  name: "invite",
+  description: "Invite me to your server!",
+  category: 'economy',
 
-    execute(client, message, args) {
-        
-        const inviteembed = new Discord.MessageEmbed()
-        .setTitle ("Chaosbot's invite")
-        .setDescription ("Want to invite ChaosBot to your server? then here's a link for you:  https://discord.com/oauth2/authorize?client_id=530267263501074443&scope=bot&permissions=2147483647")
-        .setColor ('RANDOM')
-        .setTimestamp()
-        message.channel.send(inviteembed)
-    }
-}
+
+  async execute(client, message, args) {
+
+
+    const embed = new Discord.MessageEmbed()
+      .setDescription("Hello there, if you want to invite ChaosBot to your server then just click on that little box below this embed, hope you enjoy")
+
+
+    let button = new buttons.MessageButton()
+      .setStyle('url')
+      .setURL('https://npmjs.com/discord-buttons')
+      .setLabel("ChaosBot's invite link");
+
+    message.channel.send(embed, button);
+  }
+};
