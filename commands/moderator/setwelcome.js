@@ -4,7 +4,7 @@ const Discord = require("discord.js")
 module.exports = {
     name: 'setwelcome',
     aliases: ['welcome'],
-    category: 'Core',
+    category: 'moderator',
     utilisation: '{prefix}setwelcome (channel)',
 
     execute(client, message, args) {
