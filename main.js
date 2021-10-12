@@ -41,7 +41,7 @@ for (const file of player) {
 	client.player.on(file.split(".")[0], event.bind(null, client));
 };
 
-///////////////////////////////WHEN THE BOT JOINS A GUILD///////////////////////////////
+///////////////////////////////BOT GUILD INTERACTION///////////////////////////////
 client.on('guildCreate', (guild) => {
 	let channelToSend;
 
@@ -57,6 +57,20 @@ client.on('guildCreate', (guild) => {
 		.addField("If you want to add ChaosBot to your server", "than click [here](https://discord.com/oauth2/authorize?client_id=530267263501074443&scope=bot&permissions=2147483647)")
 		.setTimestamp()
 	channelToSend.send(embed)
+})
+
+
+const welcomeSchema = require("./models/welcomeSchema")
+client.on('guildMemberAdd', async (member, guild) => {
+	welcomeSchema.findOne({ guildId: member.guild.id }, async (err, data) => {
+		if(!data) return
+
+		const user = member.user
+		const channel = member.guild.channels.cache.get(data.channelId)
+		const welcomemsg = data.welcomeMSG
+
+		channel.send(`${user} ` + welcomemsg)
+	})
 })
 
 ///////////////////////////////MONGOOSE CONENCTED AND ALL FILES LOADED///////////////////////////////
