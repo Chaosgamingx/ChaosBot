@@ -86,4 +86,4 @@ mongoose.connect(process.env.MONGODB_URI, {
 	console.log(err);
 })
 
-client.login(process.env.yeets);
+client.login("NTMwMjY3MjYzNTAxMDc0NDQz.XC2n3w._j8z7ss1D3jGxGitq6DewnbHZXM");
