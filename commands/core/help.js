@@ -16,8 +16,11 @@ module.exports = {
             const fun = message.client.commands.filter(x => x.category == 'fun').map((x) => '`' + x.name + '`').join(', ');
             const images = message.client.commands.filter(x => x.category == 'images').map((x) => '`' + x.name + '`').join(', ');
             const economy = message.client.commands.filter(x => x.category == 'economy').map((x) => '`' + x.name + '`').join(', ');
+<<<<<<< HEAD
             const image_manipulation = message.client.commands.filter(x => x.category == 'image-manipulation').map((x) => '`' + x.name + '`').join(', ');
             const search = message.client.commands.filter(x => x.category == 'search').map((x) => '`' + x.name + '`').join(', ');
+=======
+>>>>>>> 1442b7d2cd4ad5d1d6669e674737638da41e0996
 
             message.channel.send({
                 embed: {
@@ -35,8 +38,11 @@ module.exports = {
                         { name: 'Fun', value: fun },
                         { name: 'Images', value: images },
                         {name: 'Economy', value: economy},
+<<<<<<< HEAD
                         {name: 'Image manipulation', value: image_manipulation},
                         {name: 'search', value: search},
+=======
+>>>>>>> 1442b7d2cd4ad5d1d6669e674737638da41e0996
 
                         { name: 'Filters', value: client.filters.map((x) => '`' + x + '`').join(', ') },
                     ],
