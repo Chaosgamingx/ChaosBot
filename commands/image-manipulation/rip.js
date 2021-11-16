@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: "rip",
   aliases: ["died", ""],
-  category: "Image",
+  category: 'image-manipulation',
   description: "Shows RIP create with user avatar",
   usage: "rip <user>",
   async execute(client, message, args) {

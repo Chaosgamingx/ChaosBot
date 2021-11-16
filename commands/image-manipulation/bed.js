@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: "bed",
   aliases: [ "" ],
-  category: "Image",
+  category: 'image-manipulation',
   description: "Shows image in beds",
   usage: "bed <user>",
   async execute(client, message, args) {

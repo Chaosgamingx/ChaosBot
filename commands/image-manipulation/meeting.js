@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: "meeting",
   aliases: ["amongusmeeting", "mtg"],
-  category: "Image",
+  category: 'image-manipulation',
   description: "Return A Among Us Meeting Image!",
   usage: "Meeting <Text>",
   async execute(client, message, args) {

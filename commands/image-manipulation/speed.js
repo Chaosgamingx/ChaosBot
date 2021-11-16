@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: "speed",
   aliases: ["iamspeed" ,"ams"],
-  category: "Image",
+  category: 'image-manipulation',
   description: "Return A Speed Image!",
   usage: "Speed | <Mention Or ID>",
   async execute(client, message, args) {

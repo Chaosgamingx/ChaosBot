@@ -5,6 +5,7 @@ module.exports = {
     description: "Locks a channels and disallows everyone to send messages!",
     usage: "[prefix]lockchannel <#channel> <reason>",
     aliases: ['lockc', 'lock'],
+    category: 'moderator',
     async execute(client, message, args) {
 
         if(!message.member.hasPermission('MANAGE_CHANNELS')) {

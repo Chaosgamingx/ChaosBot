@@ -6,6 +6,7 @@ module.exports = {
     description: "Solve your maths homework",
     usage: "[prefix]calculator [question]",
     aliases: ['calc'],
+    category: 'misc',
     async execute(client, message, args) {
 
         if(!args[0]) {

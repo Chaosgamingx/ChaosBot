@@ -6,6 +6,7 @@ module.exports = {
     description: "enable/disable slowmode, time units - h(hour), m(minute), s(seconds)",
     usage: "[prefix]slowmode <time>",
     aliases: [],
+    category: 'moderator',
     async execute(client, message, args) {
         if (!message.member.hasPermission(('MANAGE_CHANNELS'))) {
             const slowmodeError = new MessageEmbed()

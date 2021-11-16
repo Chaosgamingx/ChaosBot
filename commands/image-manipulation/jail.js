@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: "jail",
   aliases: ["j"],
-  category: "Image",
+  category: 'image-manipulation',
   description: "Shows image of jail",
   usage: "jail <user>",
   async execute(client, message, args) {

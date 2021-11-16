@@ -5,7 +5,7 @@ module.exports = {
     
         name: "captcha",
        
-        category: "Image",
+        category: 'image-manipulation',
         description: "Shows Captcha Image Of An User",
         usage: "[username | nickname | mention | ID](optional)",
        

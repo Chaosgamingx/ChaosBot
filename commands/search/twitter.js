@@ -5,8 +5,7 @@ const twitter = require("twitter-api.js") //npm i twitter-api.js
 module.exports = {
   name: "twitter",
   aliases: ["twe"],
-  category: "search",
-  premiumOnly: "true",
+  category: 'search',
   async execute(client, message, args) {
     let user = args[0]
     if(!user) return message.channel.send("Provide your twitter name")

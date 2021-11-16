@@ -3,7 +3,7 @@ module.exports = {
     name: 'embedgen',
     aliases: ["emb"],
     description: 'embed Generator',
-    category: "info",
+    category: 'misc',
        async execute(client, message, args) {
 
        try {

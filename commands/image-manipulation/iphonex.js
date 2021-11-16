@@ -5,7 +5,7 @@ const discord = require('discord.js');
 module.exports = {
         name: 'iphonex',
         description: 'Make someone fit in an iphonex!',
-        category: 'images',
+        category: 'image-manipulation',
 
     async execute(client, message, args) {
 

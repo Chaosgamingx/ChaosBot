@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: "gun",
   aliases: ["pistol", "handsup"],
-  category: "Image",
+  category: 'image-manipulation',
   description: "Shows targeting gun image",
   usage: "gun <user>",
   async execute(client, message, args) {

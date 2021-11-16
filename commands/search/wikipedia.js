@@ -4,7 +4,7 @@ const fetch = require('node-fetch') // npm i node-fetch
 module.exports = { // Update To Your Handler
     name: 'wiki',
     aliases: ['wikipedia'],
-    category: 'misc',
+    category: 'search',
     utilisation: '{prefix}wikipedia (anything here)',
 
     async execute(client, message, args) { // Update To Your Handler

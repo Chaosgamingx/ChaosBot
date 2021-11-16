@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: "magik",
   aliases: ["magic", ""],
-  category: "Image",
+  category: 'image-manipulation',
   description: "Shows magic image",
   usage: "magik <user> <number>",
   async execute(client, message, args) {

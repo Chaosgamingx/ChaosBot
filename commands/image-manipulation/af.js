@@ -5,6 +5,7 @@ module.exports = {
     name: "avatarfusion",
     aliases: ["af"],
     description: "",
+    category: 'image-manipulation',
     async execute(client, message, args) {
         if (!message.guild.me.hasPermission('ATTACH_FILES')) return message.channel.send("**Missing Permissions - [ATTACH_FILES]!**");
         if (!args[0]) return message.channel.send("**Which User Would You Like To Be The Base?**");
