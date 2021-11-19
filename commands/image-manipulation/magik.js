@@ -10,7 +10,7 @@ module.exports = {
   async execute(client, message, args) {
     const Value = args.slice(1).join(" ");
 
-    if (!Value || Value.length > 150) return message.channel.send("<:recluse5:827723187981778945> | Please mention some one and after mention type number"); 
+    if (!Value || Value.length > 150) return message.channel.send("Please mention some one and after mention type number"); 
     
    const Member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
 
