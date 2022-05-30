@@ -7,7 +7,7 @@ module.exports = {
     description: "History lessons",
     usage: "today\n**e.g.**\n\`today\`\n> Get a random fact that took place today",
     category: 'search',
-    async execute(client, message, arg) {
+    async execute(client, message, args) {
 
         const text = await fetch('http://history.muffinlabs.com/date')
             .then(response => response.json());

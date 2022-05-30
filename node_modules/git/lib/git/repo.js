@@ -2,7 +2,7 @@ var Head = require('./head').Head,
   Git = require('./git').Git,
   Commit = require('./commit').Commit,
   fs = require('fs'),
-  sys = require('sys'),
+  util = require('util'),
   Tree = require('./tree').Tree,
   Blob = require('./blob').Blob,
   Head = require('./head').Head,
@@ -408,14 +408,14 @@ Repo.prototype.commit_stats = function(start, max_count, skip, callback) {
 //
 // Return true/false if commit worked
 Repo.prototype.commit_index = function(message, callback) {
-  this.git.commit({}, '-m', callback);
+  this.git.commit({}, '-m' + message, callback);
 }
 
 // Commits all tracked and modified files
 //
 // Return true/false if commit worked
 Repo.prototype.commit_all = function(message, callback) {
-  this.git.commit({}, '-a', '-m', callback);
+  this.git.commit({}, '-a', '-m' + message, callback);
 }
 
 // Fetch the config for the repo

@@ -22,7 +22,7 @@ module.exports = {
             .setTitle('Pong!!! Bots ping')
             .setColor('RANDOM')
             .setDescription(`**API Latency:** ${Math.round(client.ws.ping)}ms
-            **Uptime:**`  + uptime )
+            **Uptime:** ` + uptime )
             .setThumbnail(message.guild.iconURL({ dynamic: true }))
 
         message.channel.send(embed)
