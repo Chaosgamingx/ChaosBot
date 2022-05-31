@@ -8,7 +8,7 @@ module.exports = {
 
     async execute(client, message, args) {
 
-        if (!message.member.hasPermission(["ADMINISTRATOR"])) return message.channel.send("You don't have administrator privileges to announce")
+        if (!message.member.hasPermission(["ADMINISTRATOR"])) return message.channel.send("You don't have administrator privileges to disable ChatBot")
 
         let chatData = await chatModel.findOne({ GuildID: message.guild.id });
         if (!chatData) {
