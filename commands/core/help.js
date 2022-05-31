@@ -7,6 +7,7 @@ module.exports = {
     execute(client, message, args) {
         if (!args[0]) {
             const infos = message.client.commands.filter(x => x.category == 'infos').map((x) => '`' + x.name + '`').join(', ');
+            const chatbot = message.client.commands.filter(x => x.category == 'chatbot').map((x) => '`' + x.name + '`').join(', ');
             const owner = message.client.commands.filter(x => x.category == 'owner').map((x) => '`' + x.name + '`').join(', ');
             const music = message.client.commands.filter(x => x.category == 'Music').map((x) => '`' + x.name + '`').join(', ');
             const anime = message.client.commands.filter(x => x.category == 'anime').map((x) => '`' + x.name + '`').join(', ');
@@ -26,6 +27,7 @@ module.exports = {
                     footer: { text: 'This bot uses a github project made by chaosgamingx.' },
                     fields: [
                         { name: 'Bot', value: infos },
+                        { name: 'Chatbot', value: chatbot },
                         { name: 'Owner', value: owner },
                         { name: 'Music', value: music },
                         { name: 'Anime', value: anime},

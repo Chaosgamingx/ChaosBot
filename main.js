@@ -13,6 +13,7 @@ client.config = require('./config/bot');
 client.emotes = client.config.emojis;
 client.filters = client.config.filters;
 client.commands = new discord.Collection();
+client.brain = require("./data/chatSend")
 
 ///////////////////////////////COMMAND AND EVENT LOADING///////////////////////////////
 fs.readdirSync('./commands').forEach(dirs => {
