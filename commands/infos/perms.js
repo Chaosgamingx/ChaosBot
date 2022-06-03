@@ -6,6 +6,7 @@ module.exports = { // Update To Your Handler
   aliases: [],
   category: 'infos',
   utilisation: '{prefix}perms (user)',
+  description: 'Brings up a users set of permissions',
 
   async execute(client, message, args) {
 

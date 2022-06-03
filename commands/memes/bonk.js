@@ -3,6 +3,7 @@ module.exports = {
     aliases: [],
     category: 'memes',
     utilisation: '{prefix}bonk',
+    description: 'Get bonked',
 
     execute(client, message, args) {
         message.channel.send(

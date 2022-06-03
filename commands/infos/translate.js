@@ -5,6 +5,8 @@ module.exports = {
     aliases: ['translate'],
     category: 'infos',
     utilisation: '{prefix}translate (what to translate from) (what to translate too) (words/sentences to translate)',
+    description: 'Translate text from one language to another',
+
     async execute(client, message, args) {
         const LanguageToTranslateFrom = args[0]
         const LanguageToTranslateTo = args[1]

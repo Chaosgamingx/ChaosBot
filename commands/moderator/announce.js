@@ -5,6 +5,7 @@ module.exports = {
     aliases: [],
     category: 'moderator',
     utilisation: '{prefix}announce (channel id) message',
+    description: 'Sends a message from one channel to another',
 
     async execute(client, message, args) {
 

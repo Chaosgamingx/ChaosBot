@@ -1,16 +1,17 @@
 const { MessageEmbed } = require('discord.js');
-const itemss = require('../../models/items');
+const itemss = require('../../data/models/items');
 const i = 'ℹ️'
 const x = '❌'
 const tick = '✔️'
 
 const Discord = require("discord.js")
-const profileModel = require('../../models/profileSchema')
+const profileModel = require('../../data/models/profileSchema')
 module.exports = {
     name: 'buy',
     aliases: [],
     category: 'economy',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}buy (item ID)',
+    description: 'Buy something from the shop. find the ID in the shop',
 
     async execute(client, message, args) {
         const member = message.member;

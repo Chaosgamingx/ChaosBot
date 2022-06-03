@@ -3,6 +3,7 @@ module.exports = {
     aliases: [],
     category: 'anime',
     utilisation: '{prefix}animebonk',
+    description: 'Get bonked in protogen style',
 
     execute(client, message, args) {
         message.channel.send(

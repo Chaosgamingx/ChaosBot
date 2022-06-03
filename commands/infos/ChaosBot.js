@@ -5,6 +5,7 @@ module.exports = {
     aliases: ['chaosbot'],
     category: 'infos',
     utilisation: '{prefix}chaosbot',
+    description: '{prefix}shows basic info about ChaosBot',
 
     execute(client, message, args) {
         const embed = new Discord.MessageEmbed()

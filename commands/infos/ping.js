@@ -5,6 +5,7 @@ module.exports = {
     aliases: ['uptime', 'ut', 'p'],
     category: 'infos',
     utilisation: '{prefix}ping',
+    description: 'Shows the bots ping and uptime',
 
     async execute(client, message, args) {
 

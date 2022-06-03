@@ -6,6 +6,10 @@ module.exports = {
   name: "twitter",
   aliases: ["twe"],
   category: 'search',
+  description: 'Shows a twitter profile',
+  utilisation: '{prefix} (twitter profile)',
+
+
   async execute(client, message, args) {
     let user = args[0]
     if(!user) return message.channel.send("Provide your twitter name")

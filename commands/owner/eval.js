@@ -3,6 +3,7 @@ module.exports = {
     aliases: [],
     category: 'owner',
     utilisation: '{prefix}eval (code)',
+    description: 'Evaluate code',
 
     async execute(client, message, args) {
         if (message.author.id === client.config.discord.Owner) {

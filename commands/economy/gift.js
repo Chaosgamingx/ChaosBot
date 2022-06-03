@@ -1,14 +1,15 @@
-const itemss = require('../../models/items');
+const itemss = require('../../data/models/items');
 const i = 'ℹ️'
 const x = '❌'
 const tick = '✔️'
 const { MessageEmbed } = require("discord.js");
-const profileModel = require('../../models/profileSchema')
+const profileModel = require('../../data/models/profileSchema')
 module.exports = {
     name: 'gift',
     aliases: [],
     category: 'economy',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}gift (user) (item)',
+    description: 'Allows one to gift an item to a user',
 
     async execute(client, message, args) {
         let user = await profileModel.findOne({ userID: message.author.id });

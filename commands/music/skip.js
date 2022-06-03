@@ -3,6 +3,7 @@ module.exports = {
     aliases: ['sk'],
     category: 'Music',
     utilisation: '{prefix}skip',
+    description: 'Skips current song',
 
     execute(client, message) {
         if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error} - You're not in a voice channel !`);

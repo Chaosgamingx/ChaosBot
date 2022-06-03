@@ -4,6 +4,8 @@ module.exports = {
   name: "invite",
   description: "Invite me to your server!",
   category: 'infos',
+  utilisation: '{prefix}invite',
+  description: '{prefix}sends the invite link for ChaosBot and its support server',
 
 
   async execute(client, message, args) {

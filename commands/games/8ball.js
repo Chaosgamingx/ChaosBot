@@ -5,6 +5,7 @@ module.exports = {
   aliases: [],
   category: 'games',
   utilisation: '{prefix}8ball (question)',
+  description: 'Ask the 8 ball a question and recieve an answer',
 
   execute(client, message, args) {
 

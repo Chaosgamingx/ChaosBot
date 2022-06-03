@@ -6,12 +6,13 @@ const rc = '🌈'
 const ht = '🏆'
 
 const Discord = require("discord.js")
-const profileModel = require('../../models/profileSchema')
+const profileModel = require('../../data/models/profileSchema')
 module.exports = {
     name: 'shop',
     aliases: [],
     category: 'economy',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}shop',
+    description: 'Allows you to see whats available in the shop',
 
     async execute(client, message, args) {
         const member = message.author;

@@ -6,6 +6,7 @@ module.exports = {
     aliases: [],
     category: 'search',
     utilisation: '{prefix}steam (game name)',
+    description: 'Shows a steam game',
 
     execute(client, message, args) {
         // Variables

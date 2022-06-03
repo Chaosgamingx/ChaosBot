@@ -1,4 +1,4 @@
-const chatModel = require("../../models/chatbotSchema")
+const chatModel = require("../../data/models/chatbotSchema")
 
 
 module.exports = {
@@ -6,6 +6,7 @@ module.exports = {
     aliases: [],
     category: 'chatbot',
     utilisation: '{prefix}chat (your message here)',
+    description: 'Allows you to chat with ChaosBot somewhat like a person',
 
     async execute(client, message, args) {
 

@@ -1,11 +1,12 @@
-const profileModel = require('../../models/profileSchema')
+const profileModel = require('../../data/models/profileSchema')
 const Discord = require('discord.js')
 
 module.exports = {
     name: 'deposit',
     aliases: ["dep"],
     category: 'economy',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}deposit (amount)',
+    description: 'deposit your economy money to your bank account for safe keeping',
 
     async execute(client, message, args) {
 

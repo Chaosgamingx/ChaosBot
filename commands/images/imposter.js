@@ -9,8 +9,7 @@ module.exports = {
         aliases: ['imposter'],
         description: 'Be an impostor',
         category: 'images',
-        usage: '<text>',
-        examples: [ 'imposter Koni' ],
+        utilisation: '{prefix}imposter (text)',
 
     async execute(client, message, args) {
 

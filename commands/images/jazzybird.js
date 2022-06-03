@@ -2,6 +2,7 @@ module.exports = {
     name: 'jazzybird',
     aliases: [],
     category: 'images',
+    description: 'Jazzybird :D',
     utilisation: '{prefix}jazzybird',
 
     execute(client, message, args) {

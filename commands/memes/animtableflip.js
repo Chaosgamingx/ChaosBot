@@ -12,6 +12,7 @@ module.exports = {
     aliases: [],
     category: 'memes',
     utilisation: '{prefix}tableflip',
+    description: 'Do a flip!!!',
 
     async execute(client, message, args) {
         const msg = await message.channel.send('(\\\\°□°)\\\\  ┬─┬');

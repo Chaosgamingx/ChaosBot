@@ -6,7 +6,7 @@ module.exports = {
   aliases: ["amongusmeeting", "mtg"],
   category: 'image-manipulation',
   description: "Return A Among Us Meeting Image!",
-  usage: "Meeting <Text>",
+  utilisation: "{prefix}meeting <Text>",
   async execute(client, message, args) {
     
     const Value = args.join(" ");

@@ -3,6 +3,7 @@ module.exports = {
     aliases: ['filters'],
     category: 'Music',
     utilisation: '{prefix}w-filters',
+    description: 'Shows the list of filters usable',
 
     execute(client, message) {
         if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error} - You're not in a voice channel !`);

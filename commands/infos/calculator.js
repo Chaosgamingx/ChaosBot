@@ -4,7 +4,7 @@ const math = require('mathjs')
 module.exports = {
     name: 'calculator',
     description: "Solve your maths homework",
-    usage: "[prefix]calculator [question]",
+    usage: "{prefix}calculator (question)",
     aliases: ['calc'],
     category: 'infos',
     async execute(client, message, args) {

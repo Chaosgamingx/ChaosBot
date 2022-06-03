@@ -3,9 +3,9 @@ const axios = require('axios');
 
 module.exports = {
     name: "urban",
-    category: "Other",
+    category: "search",
     description: "Pulls up the urban dictionary for anything you search",
-    usage: "{prefix}urban (anything here)",
+    utilisation: "{prefix}urban (anything here)",
     category: 'search',
     async execute(client, message, args) {
         let query = args.join(" ")

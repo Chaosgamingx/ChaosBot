@@ -20,6 +20,7 @@ const specialCodes = {
 module.exports = {
         name: 'emojify',
         description: 'Emojifies the given text.',
+        utilisation: '{prefix}emojify (text)',
         category: 'fun',
         examples: [ 'emojify POG! '],
 

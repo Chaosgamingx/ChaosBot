@@ -5,6 +5,7 @@ module.exports = {
     aliases: [],
     category: 'moderator',
     utilisation: '{prefix}giveaway time choices: s(seconds), m(minutes), d(days) prize',
+    description: 'Runs a giveaway',
 
    async execute(client, message, args) {
         // !giveaway {time s/m/d} {item}

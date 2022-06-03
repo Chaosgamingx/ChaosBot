@@ -1,10 +1,11 @@
-const prefixModel = require("../../models/prefixSchema")
+const prefixModel = require("../../data/models/prefixSchema")
 
 module.exports = {
     name: 'prefixreset',
     aliases: [],
     category: 'moderator',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}prefixreset',
+    description: 'Resets the prefix back to the default one set',
 
     async execute(client, message, args) {
 

@@ -6,6 +6,7 @@ module.exports = {
     aliases: [],
     category: 'moderator',
     utilisation: '{prefix}mute (user)',
+    description: 'Mute a user',
     
     /**
      * @param {Message} message

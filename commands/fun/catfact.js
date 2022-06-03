@@ -4,6 +4,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
         name: 'catfact',
         aliases: [ 'catfacts', 'cf' ],
+        utilisation: '{prefix}catfact',
         description: 'Generate a random useless cat facts',
         category: 'fun',
 

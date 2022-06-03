@@ -2,12 +2,13 @@ const i = 'ℹ️'
 const x = '❌'
 const tick = '✔️'
 const { MessageEmbed } = require("discord.js");
-const profileModel = require('../../models/profileSchema')
+const profileModel = require('../../data/models/profileSchema')
 module.exports = {
     name: 'roulette',
     aliases: [],
     category: 'economy',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}roulette (color) (amount)',
+    description: 'Play a game of roulette. the color you choose will determine how much money you get back for winning',
 
     async execute(client, message, args) {
         let userData = await profileModel.findOne({ userID: message.author.id });

@@ -1,10 +1,11 @@
-const prefixModel = require("../../models/prefixSchema")
+const prefixModel = require("../../data/models/prefixSchema")
 
 module.exports = {
     name: 'setprefix',
     aliases: [],
     category: 'moderator',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}setprefix (new prefix)',
+    description: 'Sets a new prefix for this server',
 
     async execute(client, message, args) {
 

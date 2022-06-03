@@ -4,7 +4,7 @@ const ms = require('ms')
 module.exports = {
     name: 'slowmode',
     description: "enable/disable slowmode, time units - h(hour), m(minute), s(seconds)",
-    usage: "[prefix]slowmode <time>",
+    utilisation: "{prefix}slowmode (time)",
     aliases: [],
     category: 'moderator',
     async execute(client, message, args) {

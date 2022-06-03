@@ -5,6 +5,7 @@ module.exports = {
     aliases: [],
     category: 'infos',
     utilisation: '{prefix}servercount',
+    description: 'brings up the count for how many servers ChaosBot is in',
 
     execute(client, message, args) {
 

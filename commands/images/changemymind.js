@@ -7,8 +7,7 @@ module.exports = {
         aliases: ['chmm'],
         description: 'Sends a changemymind Text!',
         category: 'images',
-        usage: '<text>',
-        examples: [ 'changemymind Poggers' ],
+        utilisation: '{prefix}changemymind (text)',
 
     async execute(client, message, args) {
 

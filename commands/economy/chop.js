@@ -1,13 +1,14 @@
-const profileModel = require('../../models/profileSchema')
+const profileModel = require('../../data/models/profileSchema')
 const talkedRecently = new Set();
-const itemss = require('../../models/items');
+const itemss = require('../../data/models/items');
 const { MessageEmbed } = require('discord.js')
 const x = '❌'
 module.exports = {
     name: 'chop',
     aliases: [],
     category: 'economy',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}chop',
+    description: 'Gives a random chance of getting logs which you can sell for money',
 
     async execute(client, message, args) {
 

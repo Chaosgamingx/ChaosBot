@@ -3,9 +3,9 @@ const fetch = require('node-fetch');
 
 module.exports = {
     name: "today",
-    category: "Other",
+    category: "search",
     description: "History lessons",
-    usage: "today\n**e.g.**\n\`today\`\n> Get a random fact that took place today",
+    utilisation: "{prefix}today",
     category: 'search',
     async execute(client, message, args) {
 

@@ -1,5 +1,5 @@
 
-const itemss = require('../../models/items');
+const itemss = require('../../data/models/items');
 const { MessageEmbed } = require("discord.js");
 const i = 'ℹ️'
 const x = '❌'
@@ -11,14 +11,15 @@ const ha = '💎'
 const hp = '💎'
 
 const Discord = require('discord.js')
-const profileModel = require('../../models/profileSchema')
+const profileModel = require('../../data/models/profileSchema')
 const talkedRecently = new Set();
 
 module.exports = {
     name: 'mine',
     aliases: [],
     category: 'economy',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}mine',
+    description: 'Have a chance of earning a rarity of gem which can be sold for money',
 
     async execute(client, message, args) {
         let user = await profileModel.findOne({ userID: message.author.id });

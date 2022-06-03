@@ -6,6 +6,7 @@ module.exports = {
   aliases: [],
   category: 'infos',
   utilisation: '{prefix}serverinfo',
+  description: 'Brings up info on this server',
 
   execute(client, message, args) {
 

@@ -3,6 +3,7 @@ module.exports = {
     aliases: [],
     category: 'moderator',
     utilisation: '{prefix}clear (number from 2 to 100) (with the way it works, 2 is the 1st comment to clear as 1 is your comment to activate the command)',
+    description: 'Clears up to 100 messages with each use up to 12 days old',
 
     async execute(client, message, args) {
 

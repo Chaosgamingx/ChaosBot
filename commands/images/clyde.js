@@ -6,8 +6,7 @@ module.exports = {
         name: 'clyde',
         description: 'Sends a clyde message!',
         category: 'images',
-        usage: '<text>',
-        examples: [ 'clyde hey discord!' ],
+        utilisation: '{prefix}clyde (text)',
 
     async execute(client, message, args) {
 

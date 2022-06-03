@@ -1,6 +1,6 @@
-const radio = require("../../data/stations.json")
+const radio = require("../../config/stations.json")
 const Discord = require('discord.js')
-const config = require("../../config/radio.json")
+const config = require("../../data/radio/radio.json")
 const fetch = require("node-fetch")
 const { Application } = require("opusscript")
 
@@ -9,7 +9,8 @@ module.exports = {
     name: 'radio',
     aliases: [],
     category: 'Music',
-    utilisation: '{prefix}radio (station)',
+    utilisation: '{prefix}radio <station>',
+    description: 'play the radio',
 
     async execute(client, message, args) {
 

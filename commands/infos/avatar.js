@@ -6,6 +6,7 @@ module.exports = {
     aliases: [],
     category: 'infos',
     utilisation: '{prefix}avatar (user)',
+    description: '{prefix}Shows a users avatar',
 
     execute(client, message, args) {
         // Change the Command Handler or else it won't work!

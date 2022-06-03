@@ -3,6 +3,7 @@ module.exports = {
     aliases: [],
     category: 'moderator',
     utilisation: '{prefix}ban (user)',
+    description: 'Bans a user',
 
     execute(client, message, args) {
 

@@ -2,6 +2,7 @@ const Discord = require("discord.js")
 module.exports = {
     name: 'embedgen',
     aliases: ["emb"],
+    utilisation: '{prefix}embedgen',
     description: 'embed Generator',
     category: 'fun',
        async execute(client, message, args) {

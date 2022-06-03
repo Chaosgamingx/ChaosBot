@@ -1,10 +1,11 @@
-const fights = require('../../data/fights.json');
+const fights = require('../../data/fight/fights.json');
 
 module.exports = {
   name: 'fight',
   aliases: [],
     category: 'memes',
     utilisation: '{prefix}fight (user)',
+    description: 'Fight a user',
 
     execute(client, message, args) {
     let user = message.mentions.users.first();

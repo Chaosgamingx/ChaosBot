@@ -5,6 +5,7 @@ module.exports = {
     aliases: [],
     category: 'infos',
     utilisation: '{prefix}userinfo (user)',
+    description: 'Brings up info on a user',
 
     async execute(client, message, args) {
     const {guild, channel} = message

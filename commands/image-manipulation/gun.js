@@ -6,7 +6,7 @@ module.exports = {
   aliases: ["pistol", "handsup"],
   category: 'image-manipulation',
   description: "Shows targeting gun image",
-  usage: "gun <user>",
+  utilisation: "gun <user>",
   async execute(client, message, args) {
     
    const Member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;

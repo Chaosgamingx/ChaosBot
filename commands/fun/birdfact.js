@@ -4,6 +4,7 @@ const Discord = require('discord.js');
 module.exports = {
   name: 'birdfact',
   aliases: ['birdfacts', 'bf'],
+  utilisation: '{prefix}birdfact',
   description: 'Generate a random useless bird facts',
   category: 'fun',
 

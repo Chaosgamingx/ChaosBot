@@ -1,4 +1,4 @@
-  
+
 const Discord = require('discord.js')
 const fetch = require("node-fetch");
 
@@ -15,7 +15,7 @@ module.exports = {
             .then((r) => r.json());
 
         const embed = new Discord.MessageEmbed()
-           .setTitle("here's a yo mama joke")
+            .setTitle("here's a yo mama joke")
             .setColor("RANDOM")
             .setDescription(body.joke)
         message.channel.send(embed)

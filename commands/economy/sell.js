@@ -1,14 +1,15 @@
 const i = 'ℹ️'
 const x = '❌'
 const tick = '✔️'
-const itemss = require('../../models/items');
+const itemss = require('../../data/models/items');
 const { MessageEmbed } = require('discord.js');
-const profileModel = require('../../models/profileSchema')
+const profileModel = require('../../data/models/profileSchema')
 module.exports = {
     name: 'sell',
     aliases: [],
     category: 'economy',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}sell (item id) (amount)',
+    description: 'Sells an item in your inventory. check your inventory for item id',
 
     async execute(client, message, args) {
         let user = await profileModel.findOne({ userID: message.author.id });

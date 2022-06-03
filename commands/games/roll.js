@@ -5,6 +5,7 @@ module.exports = {
   aliases: [],
     category: 'games',
     utilisation: '{prefix}roll',
+    description: 'Roll a dice',
 
   //IntelliSense
   /**

@@ -4,12 +4,13 @@ const i = 'ℹ️'
 const x = '❌'
 const tick = '✔️'
 
-const profileModel = require('../../models/profileSchema')
+const profileModel = require('../../data/models/profileSchema')
 module.exports = {
     name: 'slots',
     aliases: [],
     category: 'economy',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}slots (amount)',
+    description: 'Your average slot machine. match the fruit in some combinations to earn money',
 
     async execute(client, message, args) {
         let userData = await profileModel.findOne({ userID: message.author.id });

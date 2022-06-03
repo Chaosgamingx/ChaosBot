@@ -3,6 +3,7 @@ module.exports = {
     aliases: ['sr', 'ytsearch'],
     category: 'Music',
     utilisation: '{prefix}search [name/URL]',
+    description: 'Another play command that plays music/videos',
 
     execute(client, message, args) {
         if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error} - You're not in a voice channel !`);

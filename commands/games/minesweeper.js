@@ -3,7 +3,8 @@ module.exports = {
     name: 'minesweeper',
     aliases: ['ms'],
     category: 'games',
-    utilisation: '{prefix}minesweeper',  
+    utilisation: '{prefix}minesweeper', 
+    description: 'Play a very scuffed game of minesweeper', 
 
     async execute(client, message, args) {
         let bombs = 0;

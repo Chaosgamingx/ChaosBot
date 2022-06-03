@@ -3,6 +3,7 @@ module.exports = {
     aliases: ['flip'],
     category: 'games',
     utilisation: "{prefix}coinflip or {prefix}coinflip (number of coins)",
+    description: 'Flip a coin. heads or tails my friend?',
 
     execute(client, message, args) {
 

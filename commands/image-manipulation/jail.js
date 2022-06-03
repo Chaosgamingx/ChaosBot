@@ -6,7 +6,7 @@ module.exports = {
   aliases: ["j"],
   category: 'image-manipulation',
   description: "Shows image of jail",
-  usage: "jail <user>",
+  utilisation: "{prefix}jail <user>",
   async execute(client, message, args) {
     
    const Member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;

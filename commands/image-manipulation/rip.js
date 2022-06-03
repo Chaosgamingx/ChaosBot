@@ -6,7 +6,7 @@ module.exports = {
   aliases: ["died", ""],
   category: 'image-manipulation',
   description: "Shows RIP create with user avatar",
-  usage: "rip <user>",
+  utilisation: "{prefix}rip <user>",
   async execute(client, message, args) {
     
    const Member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;

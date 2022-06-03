@@ -5,6 +5,7 @@ module.exports = {
     aliases: [],
     category: 'infos',
     utilisation: '{prefix}help <command name>',
+    description: 'Sends the link to vote for ChaosBot',
 
     execute(client, message, args) {
         const usertag = message.member;

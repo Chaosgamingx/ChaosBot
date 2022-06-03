@@ -2,13 +2,13 @@ const Discord = require('discord.js');
 const fetch = require('node-fetch');
 
 module.exports = {
-    
-        name: "captcha",
-       
-        category: 'image-manipulation',
-        description: "Shows Captcha Image Of An User",
-        usage: "[username | nickname | mention | ID](optional)",
-       
+
+    name: "captcha",
+
+    category: 'image-manipulation',
+    description: "Shows Captcha Image Of An User",
+    utilisation: "{prefix}captcah (user)",
+
     async execute(client, message, args) {
 
         let user = await message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.member;

@@ -1,11 +1,12 @@
-const profileModel = require('../../models/profileSchema')
+const profileModel = require('../../data/models/profileSchema')
 const Discord = require('discord.js')
 
 module.exports = {
     name: 'withdraw',
     aliases: ["wit"],
     category: 'economy',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}withdraw (amount)',
+    description: 'Allows you to withdraw money from your economy bank account',
 
     async execute(client, message, args) {
 

@@ -3,6 +3,7 @@ module.exports = {
     aliases: [],
     category: 'moderator',
     utilisation: '{prefix}kick (user)',
+    description: 'Kicks a user',
 
     execute(client, message, args) {
 

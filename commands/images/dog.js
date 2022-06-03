@@ -6,6 +6,7 @@ module.exports = {
         name: 'dog',
         description: 'Get a cute dog picture!',
         category: 'images',
+        utilisation: '{prefix}dog',
 
     async execute(client, message, args) {
 

@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js")
 module.exports = {
     name: 'lockchannel',
     description: "Locks a channels and disallows everyone to send messages!",
-    usage: "[prefix]lockchannel <#channel> <reason>",
+    utilisation: "{prefix}lockchannel (channel) <reason>",
     aliases: ['lockc', 'lock'],
     category: 'moderator',
     async execute(client, message, args) {

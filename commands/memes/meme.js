@@ -5,6 +5,7 @@ module.exports = {
     aliases: [],
     category: 'memes',
     utilisation: '{prefix}memes',
+    description: 'Get memes',
 
     execute(client, message, args) {
 

@@ -1,4 +1,4 @@
-const profileModel = require('../../models/profileSchema')
+const profileModel = require('../../data/models/profileSchema')
 const Discord = require('discord.js')
 const talkedRecently = new Set();
 
@@ -6,7 +6,8 @@ module.exports = {
     name: 'beg',
     aliases: [],
     category: 'economy',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}beg',
+    description: 'Gives a random chance of earning money.',
 
     async execute(client, message, args) {
         const randomNumber = Math.floor(Math.random() * 500) + 1;

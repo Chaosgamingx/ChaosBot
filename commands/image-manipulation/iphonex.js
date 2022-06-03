@@ -6,6 +6,7 @@ module.exports = {
         name: 'iphonex',
         description: 'Make someone fit in an iphonex!',
         category: 'image-manipulation',
+        utilisation: '{prefix}iphonex <user>',
 
     async execute(client, message, args) {
 

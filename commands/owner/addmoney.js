@@ -1,10 +1,11 @@
-const profileModel = require('../../models/profileSchema')
+const profileModel = require('../../data/models/profileSchema')
 
 module.exports = {
     name: 'addmoney',
     aliases: [],
     category: 'owner',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}addmoney (user) (amount)',
+    description: 'Gives money to a player',
 
     async execute(client, message, args) {
         if (message.author.id === cleint.config.discord.Owner) {

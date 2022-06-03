@@ -6,7 +6,7 @@ module.exports = {
   aliases: ["iamspeed" ,"ams"],
   category: 'image-manipulation',
   description: "Return A Speed Image!",
-  usage: "Speed | <Mention Or ID>",
+  utilisation: "{prefix}speed <user>",
   async execute(client, message, args) {
     
     const Member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;

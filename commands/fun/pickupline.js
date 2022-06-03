@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 
 
 const line = [
-    
+
     "I hope you know CPR because you take my breath away!",
     "You've made me so nervous that I've totally forgotten my standard pick-up line.",
     "Are you a trap card? Because I’ve fallen for you.",
@@ -39,17 +39,18 @@ const line = [
 
 const { MessageEmbed } = require('discord.js');
 module.exports = {
-        name: 'pickupline',
-        description: 'Generate some pickuplines!',
-        category: 'fun',
-        
+    name: 'pickupline',
+    description: 'Generate some pickuplines!',
+    utilisation: '{prefix}pickupline',
+    category: 'fun',
+
 
     async execute(client, message, args) {
 
-        
+
         const embed = new MessageEmbed()
-                    .setDescription(line[Math.round(Math.random() * (line.length - 1))])
-                    .setColor(client.color);
-                return message.channel.send({ embed }).catch(() => {});
+            .setDescription(line[Math.round(Math.random() * (line.length - 1))])
+            .setColor(client.color);
+        return message.channel.send({ embed }).catch(() => { });
     }
 };

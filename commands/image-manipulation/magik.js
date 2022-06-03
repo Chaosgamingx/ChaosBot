@@ -6,7 +6,7 @@ module.exports = {
   aliases: ["magic", ""],
   category: 'image-manipulation',
   description: "Shows magic image",
-  usage: "magik <user> <number>",
+  utilisation: "{prefix}magik <user> <number>",
   async execute(client, message, args) {
     const Value = args.slice(1).join(" ");
 

@@ -4,6 +4,7 @@ module.exports = {
     aliases: [],
     category: 'games',
     utilisation: '{prefix}rps',
+    description: 'Go head to head against ChaosBot in rock paper scissors',
 
     async execute(client, message, args) {
 		let embed = new discord.MessageEmbed()

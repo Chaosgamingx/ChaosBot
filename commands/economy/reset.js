@@ -1,11 +1,11 @@
-const profileModels = require('../../models/profileSchema');
+const profileModels = require('../../data/models/profileSchema');
 const Discord = require('discord.js')
 module.exports = {
     name: 'economyDelete',
     aliases: ["delete", "reset"],
     category: 'Economy',
-    utilisation: '{prefix}help <command name>',
-    description: 'this deletes your economy data for your profile',
+    utilisation: '{prefix}reset',
+    description: 'Resets your economy profile',
 
     async execute(client, message, args) {
 

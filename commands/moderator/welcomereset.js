@@ -1,11 +1,12 @@
-const welcomeSchema = require("../../models/welcomeSchema")
+const welcomeSchema = require("../../data/models/welcomeSchema")
 const Discord = require("discord.js")
 
 module.exports = {
     name: 'welcomereset',
     aliases: [],
     category: 'moderator',
-    utilisation: '{prefix}setwelcome (channel)',
+    utilisation: '{prefix}welcomereset',
+    description: 'Removes the welcome message',
 
     async execute(client, message, args) {
         if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("you are not a moderator")

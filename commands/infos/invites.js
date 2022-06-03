@@ -4,7 +4,8 @@ module.exports = {
     name: 'invitecounter',
     aliases: ["invites"],
     category: 'infos',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}invitecounter <user>',
+    description: '{prefix}brings up the number of people you invited to a server',
 
     execute(client, message, args) {
         var targetUser = null;

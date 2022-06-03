@@ -1,11 +1,12 @@
 const Discord = require('discord.js');
-const profileModel = require('../../models/profileSchema')
+const profileModel = require('../../data/models/profileSchema')
 
 module.exports = {
     name: 'inventory',
     aliases: ['inv'],
     category: 'economy',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}inventory',
+    description: 'Allows you to see your inventory',
 
     async execute(client, message, args) {
         let user = await profileModel.findOne({ userID: message.author.id });

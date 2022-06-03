@@ -6,8 +6,8 @@ const discord = require("discord.js");
 module.exports = {
         name: 'vaporwave',
         description: 'Vaporwavefies a text.',
+        utilisation: '{prefix}vaporwave (text)',
         category: 'fun',
-        examples: [ 'vaporwave POG' ],
 
     async execute(client, message, args) {
       

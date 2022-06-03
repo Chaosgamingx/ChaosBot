@@ -5,8 +5,8 @@ module.exports = {
   name: "bed",
   aliases: [ "" ],
   category: 'image-manipulation',
-  description: "Shows image in beds",
-  usage: "bed <user>",
+  description: "Shows users in beds",
+  utilisation: "{prefix}bed <user>",
   async execute(client, message, args) {
     
    const Member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;

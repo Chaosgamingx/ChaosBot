@@ -13,7 +13,7 @@ client.config = require('./config/bot');
 client.emotes = client.config.emojis;
 client.filters = client.config.filters;
 client.commands = new discord.Collection();
-client.brain = require("./data/chatSend")
+client.brain = require("./data/chatbot/chatSend")
 
 ///////////////////////////////COMMAND AND EVENT LOADING///////////////////////////////
 fs.readdirSync('./commands').forEach(dirs => {
@@ -61,7 +61,7 @@ client.on('guildCreate', (guild) => {
 })
 
 
-const welcomeSchema = require("./models/welcomeSchema")
+const welcomeSchema = require("./data/models/welcomeSchema")
 client.on('guildMemberAdd', async (member, guild) => {
 	welcomeSchema.findOne({ guildId: member.guild.id }, async (err, data) => {
 		if(!data) return

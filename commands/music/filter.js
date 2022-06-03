@@ -2,7 +2,8 @@ module.exports = {
     name: 'filter',
     aliases: [],
     category: 'Music',
-    utilisation: '{prefix}filter [filter name]',
+    utilisation: '{prefix}filter (filter name)',
+    description: 'Applies a filter to the song',
 
     execute(client, message, args) {
         if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error} - You're not in a voice channel !`);

@@ -1,11 +1,11 @@
-const itemss = require('../../models/items');
+const itemss = require('../../data/models/items');
 const { MessageEmbed } = require("discord.js");
 const i = 'ℹ️'
 const x = '❌'
 const tick = '✔️'
 const junkemoji = '🥾'
 const legfish = '🐋'
-const profileModel = require('../../models/profileSchema')
+const profileModel = require('../../data/models/profileSchema')
 const Discord = require('discord.js')
 const talkedRecently = new Set();
 
@@ -13,7 +13,8 @@ module.exports = {
     name: 'fish',
     aliases: [],
     category: 'economy',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}fish',
+    description: 'Gives a chance to earn some rarity of fish or junk which can be sold for money',
 
     async execute(client, message, args) {
         let user = await profileModel.findOne({ userID: message.author.id });

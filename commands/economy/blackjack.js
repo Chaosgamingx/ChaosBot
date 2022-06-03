@@ -1,16 +1,17 @@
 
 const { MessageEmbed } = require('discord.js');
-const itemss = require('../../models/items');
+const itemss = require('../../data/models/items');
 const i = 'ℹ️'
 const x = '❌'
 const tick = '✔️'
 
-const profileModel = require('../../models/profileSchema')
+const profileModel = require('../../data/models/profileSchema')
 module.exports = {
     name: 'blackjack',
     aliases: ['bj'],
     category: 'economy',
-    utilisation: '{prefix}help <command name>',
+    utilisation: '{prefix}blackjack (bet amount)',
+    description: 'Play a game of blackjack against a somewhat unfair bot. I swear its 100% random',
 
     async execute(client, message, args) {
         let userData = await profileModel.findOne({ userID: message.author.id });

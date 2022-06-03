@@ -6,6 +6,7 @@ module.exports = {
         name: 'cat',
         description: 'Get a cat picture!',
         category: 'images',
+        utilisation: '{prefix}cat',
     
     
 
