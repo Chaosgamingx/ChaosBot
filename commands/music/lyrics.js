@@ -33,7 +33,7 @@ module.exports = {
             .setColor('RANDOM')
             .setTimestamp()
             .setFooter(`Requested by: ${message.author.tag}`, message.author.displayAvatarURL())
-            .setThumbnail
+            .setThumbnail()
 
         return message.channel.send(embed).catch(console.error);
     }
