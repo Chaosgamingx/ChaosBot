@@ -5,7 +5,7 @@ module.exports = {
     name: 'lyrics',
     aliases: [],
     category: 'Music',
-    utilisation: '{prefix}lyrics (Song title if you dont want the one currently playing)',
+    utilisation: '{prefix}lyrics (Song title)',
     description: 'Sends the lyrics to a song of your choice',
 
     async execute(client, message, args) {
@@ -13,7 +13,7 @@ module.exports = {
 
         const queue = client.player.getQueue(message);
 
-        const query = args.slice(`${prefix}help`).join(" ") || queue.playing.title;
+        const query = args.slice(`${prefix}help`).join(" ");
 
         if (!query)
             return message.channel.send("You forgot to provide the song name.");
