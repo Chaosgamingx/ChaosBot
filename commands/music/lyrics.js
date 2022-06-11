@@ -29,7 +29,7 @@ module.exports = {
 
         const embed = new discord.MessageEmbed()
             .setTitle(`${query}`)
-            .setDescription(`${result.lyrics.slice(0)}`)
+            .setDescription(`${result.lyrics.slice(0, 5996))}...`)
             .setColor('RANDOM')
             .setTimestamp()
             .setFooter(`Requested by: ${message.author.tag}`, message.author.displayAvatarURL())
