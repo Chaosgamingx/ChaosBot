@@ -5,7 +5,7 @@ module.exports = { // Update To Your Handler
     name: 'wiki',
     aliases: ['wikipedia'],
     category: 'search',
-    utilisation: '{prefix}wikipedia (anything here)',
+    utilisation: '{prefix}wikipedia (anything here)', 
     description: 'Search wikipedia',
 
     async execute(client, message, args) { // Update To Your Handler

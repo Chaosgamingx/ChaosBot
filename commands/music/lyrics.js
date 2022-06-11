@@ -1,63 +1,40 @@
-const Discord = require("discord.js");
-const lyricsfinder = require("lyrics-finder");
-
+const discord = require('discord.js')
+const { Lyrics } = require("@discord-player/extractor");
+const lyricsClient = Lyrics.init();
 module.exports = {
     name: 'lyrics',
     aliases: [],
     category: 'Music',
-    utilisation: '{prefix}lyrics (author)',
+    utilisation: '{prefix}lyrics (Song title if you dont want the one currently playing)',
     description: 'Sends the lyrics to a song of your choice',
 
     async execute(client, message, args) {
+        const prefix = client.config.discord.prefix;
 
-        if (args.length < 1) return message.channel.send("Please say the authors name");
+        const queue = client.player.getQueue(message);
 
-        let artist = args.join(" ");
-        let songname = '';
-        let pages = [];
-        let currentpage = 0;
+        const query = args.slice(`${prefix}help`).join(" ") || queue.playing.title;
 
-        const messageFilter = m => m.author.id === message.author.id;
-        const reactionFilter = (reaction, user) => ['⬅️', '➡️'].includes(reaction.emoji.name) && (message.author.id === user.id)
+        if (!query)
+            return message.channel.send("You forgot to provide the song name.");
 
-        message.channel.send("please enter the song name now (dont use =lyrics for this part)");
-        await message.channel.awaitMessages(messageFilter, { max: 1, time: 15000 }).then(async collected => {
-            songname = collected.first().content;
-            await finder(artist, songname, message, pages)
-        }).catch(error => { message.channel.send("failed to type a song name in 15 seconds") });
+        const queryFormated = query
+            .toLowerCase()
+            .replace(/\(lyrics|lyric|official music video|official video hd|official video|audio|official|clip officiel|clip|extended|hq\)/g, "");
 
-        const lyricEmbed = await message.channel.send(`Lyrics page: ${currentpage + 1}/${pages.length}`, pages[currentpage])
-        await lyricEmbed.react("⬅️");
-        await lyricEmbed.react("➡️");
+        const result = await lyricsClient.search(`${queryFormated}`);
 
-        const collector = lyricEmbed.createReactionCollector(reactionFilter);
+        if (!result || !result.lyrics)
+            return message.channel.send("No lyrics were found for this song.");
 
-        collector.on('collect', (reaction, user) => {
-            if(reaction.emoji.name === '➡️'){
-                if(currentpage < pages.length-1){
-                    currentpage+=1;
-                    lyricEmbed.edit(`Lyrics page: ${currentpage+1}/${pages.length}`, pages[currentpage])
-                }
-            }else if(reaction.emoji.name === '⬅️'){
-                if (currentpage !== 0){
-                    currentpage -= 1;
-                    lyricEmbed.edit(`Lyrics Page: ${currentpage+1}/${pages.length}`, pages[currentpage])
-                }
-            };
-
-        })
-    }
-}
-
-async function finder(artist, songname, message, pages) {
-    let fullLyrics = await lyricsfinder(artist, songname) || "Not Found!";
-    for (let i = 0; i < fullLyrics.length; i += 2048) {
-        const lyric = fullLyrics.substring(i, Math.min(fullLyrics.length, i + 2048))
-        const msg = new Discord.MessageEmbed()
-            .setDescription(lyric)
+        const embed = new discord.MessageEmbed()
+            .setTitle(`${query}`)
+            .setDescription(`${result.lyrics.slice(0)}`)
             .setColor('RANDOM')
             .setTimestamp()
-            .setFooter(message.author.tag, message.author.displayAvatarURL());
-        pages.push(msg);
+            .setFooter(`Requested by: ${message.author.tag}`, message.author.displayAvatarURL())
+            .setThumbnail
+
+        return message.channel.send(embed).catch(console.error);
     }
-}
+};
