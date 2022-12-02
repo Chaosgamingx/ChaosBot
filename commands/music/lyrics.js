@@ -5,7 +5,7 @@ module.exports = {
     name: 'lyrics',
     aliases: [],
     category: 'Music',
-    utilisation: '{prefix}lyrics (Song title if you dont want the one currently playing)',
+    utilisation: '{prefix}lyrics (Song title)',
     description: 'Sends the lyrics to a song of your choice',
 
     async execute(client, message, args) {
@@ -13,7 +13,7 @@ module.exports = {
 
         const queue = client.player.getQueue(message);
 
-        const query = args.slice(`${prefix}help`).join(" ") || queue.playing.title;
+        const query = args.slice(`${prefix}help`).join(" ");
 
         if (!query)
             return message.channel.send("You forgot to provide the song name.");
@@ -29,11 +29,11 @@ module.exports = {
 
         const embed = new discord.MessageEmbed()
             .setTitle(`${query}`)
-            .setDescription(`${result.lyrics.slice(0)}`)
+            .setDescription(`${result.lyrics.slice(0, 4090)}...`)
             .setColor('RANDOM')
             .setTimestamp()
             .setFooter(`Requested by: ${message.author.tag}`, message.author.displayAvatarURL())
-            .setThumbnail
+            .setThumbnail()
 
         return message.channel.send(embed).catch(console.error);
     }

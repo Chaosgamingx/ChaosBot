@@ -77,13 +77,13 @@ client.on('guildMemberAdd', async (member, guild) => {
 ///////////////////////////////MONGOOSE CONENCTED AND ALL FILES LOADED///////////////////////////////
 
 mongoose.connect(client.config.discord.MongoDB, {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-	useFindAndModify: false,
+ 	useNewUrlParser: true,
+ 	useUnifiedTopology: true,
+ 	useFindAndModify: false,
 	useCreateIndex: true
-}).then(() => {
+ }).then(() => {
 	console.log("connected to mongo and all files loaded")
-}).catch((err) => {
+ }).catch((err) => {
 	console.log(err);
 })
 
