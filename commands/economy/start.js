@@ -123,6 +123,8 @@ module.exports = {
                 \u200b
                 **Accessory**: ${path.accessoryid}`, true)
                 .addField('\u200b', stripIndents`**Class**: ${path.class}`)
+                .addField('\u200b', `**XP**: ${profileData.xp}`)
+                .addField('\u200b', `**Level**: ${profileData.level}`)
             return message.channel.send(embed)
         } else if (args[0] === "priest") {
             const path = priest.one
@@ -166,7 +168,9 @@ module.exports = {
                     **SPR**: ${path.spr}
                     \u200b
                     **Accessory**: ${path.accessoryid}`, true)
-                    .addField('\u200b', stripIndents`**Class**: ${path.class}`)
+                .addField('\u200b', stripIndents`**Class**: ${path.class}`)
+                .addField('\u200b', `**XP**: ${profileData.xp}`)
+                .addField('\u200b', `**Level**: ${profileData.level}`)
             return message.channel.send(embed)
         } else if (args[0] === "rogue") {
             const path = rogue.one
@@ -211,7 +215,9 @@ module.exports = {
                     **SPR**: ${path.spr}
                     \u200b
                     **Accessory**: ${path.accessoryid}`, true)
-                    .addField('\u200b', stripIndents`**Class**: ${path.class}`)
+                .addField('\u200b', stripIndents`**Class**: ${path.class}`)
+                .addField('\u200b', `**XP**: ${profileData.xp}`)
+                .addField('\u200b', `**Level**: ${profileData.level}`)
             return message.channel.send(embed)
         } else if (args[0] === "warrior") {
             const path = warrior.one
@@ -255,7 +261,9 @@ module.exports = {
                     **SPR**: ${path.spr}
                     \u200b
                     **Accessory**: ${path.accessoryid}`, true)
-                    .addField('\u200b', stripIndents`**Class**: ${path.class}`)
+                .addField('\u200b', stripIndents`**Class**: ${path.class}`)
+                .addField('\u200b', `**XP**: ${profileData.xp}`)
+                .addField('\u200b', `**Level**: ${profileData.level}`)
             return message.channel.send(embed)
         }
 
