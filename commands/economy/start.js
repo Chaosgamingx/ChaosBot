@@ -29,25 +29,36 @@ module.exports = {
         if (!args[0]) return message.channel.send(`${message.author} ${input.prompt.start}`)
         if (!args[0] === input.prompt.class) return message.channel.send(`${message.author} ${input.prompt.retry}`)
 
+        let path;
+        if (args[0] === "warrior") path = warrior.one;
+        if (args[0] === "priest") path = priest.one;
+        if (args[0] === "rogue") path = rogue.one;
+        if (args[0] === "mage") path = mage.one;
+
+
         let profileData = await profileModel.findOne({ userID: message.author.id });
         if (profileData) {
             if (!profileData.class) {
-                let path = []
-                if (args[0] === "warrior") { let path = warrior.one }
-                if (args[0] === "priest") { let path = priest.one }
-                if (args[0] === "rogue") { let path = rogue.one }
-                if (args[0] === "mage") { let path = mage.one }
 
                 let profile = await profileModel.findOneAndUpdate({
                     userID: message.author.id,
                 }, {
-                    level: 1,
-                    xp: 0,
+                    level: path.level,
+                    xp: path.xp,
                     class: path.class,
                     weaponid: path.weaponid,
                     armorid: path.armorid,
                     accessoryid: path.accessoryid,
-
+                    str: path.str,
+                    agi: path.agi,
+                    con: path.con,
+                    mag: path.mag,
+                    spr: path.spr,
+                    hp: path.hp,
+                    mp: path.mp,
+                    tough: path.tough,
+                    mind: path.mind,
+                    abilities: path.abilities
                 })
 
                 profile.save();
@@ -80,29 +91,33 @@ module.exports = {
             } else {
                 return message.channel.send("your class has already been assigned. to switch, please do =reset to start over with a different class")
             }
-        };
-
-        if (args[0] === "mage") {
-            const path = mage.one
-
-            let member = message.author
-            let profileData = await profileModel.findOne({ userID: message.author.id });
+        } else {
             if (!profileData) {
                 let profile = await profileModel.create({
                     userID: message.author.id,
                     serverID: message.guild.id,
                     coin: 0,
                     bank: 0,
-                    level: 1,
-                    xp: 0,
-                    class: "mage",
+                    level: path.level,
+                    xp: path.xp,
+                    class: path.class,
                     weaponid: path.weaponid,
                     armorid: path.armorid,
                     accessoryid: path.accessoryid,
+                    str: path.str,
+                    agi: path.agi,
+                    con: path.con,
+                    mag: path.mag,
+                    spr: path.spr,
+                    hp: path.hp,
+                    mp: path.mp,
+                    tough: path.tough,
+                    mind: path.mind,
+                    abilities: path.abilities
                 });
                 profile.save();
-            }
 
+            }
             const embed = new MessageEmbed()
                 .setColor(color)
                 .setAuthor(`${message.author.username} has embarked upon the path of the ${args[0]}.`, message.author.displayAvatarURL())
@@ -128,146 +143,6 @@ module.exports = {
                 .addField('\u200b', `**XP**: ${path.xp}`)
                 .addField('\u200b', `**Level**: ${path.level}`)
             return message.channel.send(embed)
-        } else if (args[0] === "priest") {
-            const path = priest.one
-
-            let member = message.author
-            let profileData = await profileModel.findOne({ userID: message.author.id });
-            if (!profileData) {
-                let profile = await profileModel.create({
-                    userID: message.author.id,
-                    serverID: message.guild.id,
-                    coin: 0,
-                    bank: 0,
-                    level: 1,
-                    xp: 0,
-                    class: "priest",
-                    weaponid: path.weaponid,
-                    armorid: path.armorid,
-                    accessoryid: path.accessoryid,
-                });
-                profile.save();
-            }
-
-            const embed = new MessageEmbed()
-                .setColor(color)
-                .setAuthor(`${message.author.username} has embarked upon the path of the ${args[0]}.`, message.author.displayAvatarURL())
-                .addField('\u200b', stripIndents`**HP**: ${path.hp}
-                    \u200b
-                    **STR**: ${path.str}
-                    **AGI**: ${path.agi}
-                    \u200b
-                    **Weapon**: ${path.weaponid}`, true)
-                .addField('\u200b', stripIndents`**MP**: ${path.mp}
-                    \u200b
-                    **CON**: ${path.con}
-                    \u200b
-                    \u200b
-                    **Armor**: ${path.armorid}`, true)
-                .addField('\u200b', stripIndents`\u200b
-                    \u200b
-                    **MAG**: ${path.mag}
-                    **SPR**: ${path.spr}
-                    \u200b
-                    **Accessory**: ${path.accessoryid}`, true)
-                .addField('\u200b', stripIndents`**Class**: ${path.class}`)
-                .addField('\u200b', `**XP**: ${path.xp}`)
-                .addField('\u200b', `**Level**: ${path.level}`)
-            return message.channel.send(embed)
-        } else if (args[0] === "rogue") {
-            const path = rogue.one
-
-            let member = message.author
-            let profileData = await profileModel.findOne({ userID: message.author.id });
-            if (!profileData) {
-                let profile = await profileModel.create({
-                    userID: message.author.id,
-                    serverID: message.guild.id,
-                    coin: 0,
-                    bank: 0,
-                    level: 1,
-                    xp: 0,
-                    class: "rogue",
-                    weaponid: path.weaponid,
-                    armorid: path.armorid,
-                    accessoryid: path.accessoryid,
-                });
-                profile.save();
-
-            }
-
-            const embed = new MessageEmbed()
-                .setColor(color)
-                .setAuthor(`${message.author.username} has embarked upon the path of the ${args[0]}.`, message.author.displayAvatarURL())
-                .addField('\u200b', stripIndents`**HP**: ${path.hp}
-                    \u200b
-                    **STR**: ${path.str}
-                    **AGI**: ${path.agi}
-                    \u200b
-                    **Weapon**: ${path.weaponid}`, true)
-                .addField('\u200b', stripIndents`**MP**: ${path.mp}
-                    \u200b
-                    **CON**: ${path.con}
-                    \u200b
-                    \u200b
-                    **Armor**: ${path.armorid}`, true)
-                .addField('\u200b', stripIndents`\u200b
-                    \u200b
-                    **MAG**: ${path.mag}
-                    **SPR**: ${path.spr}
-                    \u200b
-                    **Accessory**: ${path.accessoryid}`, true)
-                .addField('\u200b', stripIndents`**Class**: ${path.class}`)
-                .addField('\u200b', `**XP**: ${path.xp}`)
-                .addField('\u200b', `**Level**: ${path.level}`)
-            return message.channel.send(embed)
-        } else if (args[0] === "warrior") {
-            const path = warrior.one
-
-            let member = message.author
-            let profileData = await profileModel.findOne({ userID: message.author.id });
-            if (!profileData) {
-                let profile = await profileModel.create({
-                    userID: message.author.id,
-                    serverID: message.guild.id,
-                    coin: 0,
-                    bank: 0,
-                    level: 1,
-                    xp: 0,
-                    class: "warrior",
-                    weaponid: path.weaponid,
-                    armorid: path.armorid,
-                    accessoryid: path.accessoryid,
-                });
-                profile.save();
-            }
-
-            const embed = new MessageEmbed()
-                .setColor(color)
-                .setAuthor(`${message.author.username} has embarked upon the path of the ${args[0]}.`, message.author.displayAvatarURL())
-                .addField('\u200b', stripIndents`**HP**: ${path.hp}
-                    \u200b
-                    **STR**: ${path.str}
-                    **AGI**: ${path.agi}
-                    \u200b
-                    **Weapon**: ${path.weaponid}`, true)
-                .addField('\u200b', stripIndents`**MP**: ${path.mp}
-                    \u200b
-                    **CON**: ${path.con}
-                    \u200b
-                    \u200b
-                    **Armor**: ${path.armorid}`, true)
-                .addField('\u200b', stripIndents`\u200b
-                    \u200b
-                    **MAG**: ${path.mag}
-                    **SPR**: ${path.spr}
-                    \u200b
-                    **Accessory**: ${path.accessoryid}`, true)
-                .addField('\u200b', stripIndents`**Class**: ${path.class}`)
-                .addField('\u200b', `**XP**: ${path.xp}`)
-                .addField('\u200b', `**Level**: ${path.level}`)
-            return message.channel.send(embed)
         }
-
     }
 }
