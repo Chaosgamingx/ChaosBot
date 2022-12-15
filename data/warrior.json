@@ -8,6 +8,7 @@
     "class": "warrior",
     "spr": 1,
     "hp": 20,
+    "xp": 0,
     "mp": 8,
     "tough": 2,
     "mind": 1,

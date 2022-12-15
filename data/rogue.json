@@ -6,6 +6,7 @@
     "con":2,
     "mag":1,
     "spr":1,
+    "xp": 0,
     "class": "rogue",
     "hp":15,
     "mp":10,
