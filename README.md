@@ -18,21 +18,21 @@ Have anything to add or edit? Hit me up on Discord and I can help get you set up
 - And a lot more that's being added
 
 ## Command categories
-D&D
-Anime
-Chatbot
-core (contains help command)
-Economy (being revamped with RPG)
-Fun
-Games
-Image-manipulation
-Images
-Info
-Memes
-Moderator
-Music
-Owner
-Search
+- D&D
+- Anime
+- Chatbot
+- Core (contains help command)
+- Economy (being revamped with RPG)
+- Fun
+- Games
+- Image-manipulation
+- Images
+- Info
+- Memes
+- Moderator
+- Music
+- Owner
+- Search
 
 ### All stars/forks are appreciated! ⚡
 
