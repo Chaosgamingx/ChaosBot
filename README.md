@@ -1,7 +1,51 @@
-# ChaosBot
+[![invite ChaosBot]](https://discord.com/api/oauth2/authorize?client_id=1023731050251296769&permissions=4374424190327&scope=applications.commands%20bot)
 
-This bot is an all-in-one bot that will have all it's commands suggested by you the users. if it's a really good idea, it may happen.
-This bot has been made to be in 1 server as it requires the new privilege which means it can't go into more than 1 server. but, you can always make it have slash commands if you feel determined :)
+An open-source bot where people can have complete freedom to make and add whatever they please. edit files to make the bot faster, add new commands, ect.
+Have anything to add or edit? Hit me up on Discord and I can help get you set up with the Github project!
 
-If you wish to help out, whether it be coding, artwork, ect. hit me up on Discord: Chaosgamingx#8511
-I'd love the help
+[![server invite]](https://discord.gg/cSJuaWBBc7)
+
+## Features
+
+- Welcome/leave messages
+- Play games
+- Use util commands to get your avatar, botinfo, channelinfo and more
+- Play music
+- Get animal pictures
+- XP system (WIP)
+- Economy system (being revamped)
+- Easy to use
+- And a lot more that's being added
+
+## Command categories
+D&D
+Anime
+Chatbot
+core (contains help command)
+Economy (being revamped with RPG)
+Fun
+Games
+Image-manipulation
+Images
+Info
+Memes
+Moderator
+Music
+Owner
+Search
+
+### All stars/forks are appreciated! ⚡
+
+**Feel free to open a pull request with a new feature. Or join the discord server if you wish to become a full member to Github**
+
+Made with ❤️ and TypeScript!
+
+## Data collection
+
+ChaosBot does not, and will not, sell or collect personal data. If you have any concerns, please contact me and I can help you out.
+
+## Self hosting
+
+> ChaosBot, while can be self hosted, has many bugs in it that can cause the bot to crash by a misuse of commands. You may self host ChaosBot if you wish or use the official chaosbot for best usage.
+
+- Text by [@Chaosgamingx](https://github.com/Chaosgamingx)
