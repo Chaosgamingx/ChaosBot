@@ -38,8 +38,6 @@ Search
 
 **Feel free to open a pull request with a new feature. Or join the discord server if you wish to become a full member to Github**
 
-Made with ❤️ and TypeScript!
-
 ## Data collection
 
 > ChaosBot does not, and will not, sell or collect personal data. If you have any concerns, please contact me and I can help you out.
