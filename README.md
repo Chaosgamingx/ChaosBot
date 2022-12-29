@@ -1,9 +1,9 @@
-[![invite ChaosBot]](https://discord.com/api/oauth2/authorize?client_id=1023731050251296769&permissions=4374424190327&scope=applications.commands%20bot)
+[[invite ChaosBot]](https://discord.com/api/oauth2/authorize?client_id=1023731050251296769&permissions=4374424190327&scope=applications.commands%20bot)
 
 An open-source bot where people can have complete freedom to make and add whatever they please. edit files to make the bot faster, add new commands, ect.
 Have anything to add or edit? Hit me up on Discord and I can help get you set up with the Github project!
 
-[![server invite]](https://discord.gg/cSJuaWBBc7)
+[[server invite]](https://discord.gg/cSJuaWBBc7)
 
 ## Features
 
@@ -42,10 +42,10 @@ Made with ❤️ and TypeScript!
 
 ## Data collection
 
-ChaosBot does not, and will not, sell or collect personal data. If you have any concerns, please contact me and I can help you out.
+> ChaosBot does not, and will not, sell or collect personal data. If you have any concerns, please contact me and I can help you out.
 
 ## Self hosting
 
 > ChaosBot, while can be self hosted, has many bugs in it that can cause the bot to crash by a misuse of commands. You may self host ChaosBot if you wish or use the official chaosbot for best usage.
 
-- Text by [@Chaosgamingx](https://github.com/Chaosgamingx)
+- [@Chaosgamingx](https://github.com/Chaosgamingx)
