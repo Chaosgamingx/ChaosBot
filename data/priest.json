@@ -1,0 +1,46 @@
+{ 
+  "one": {
+    "level":1,
+    "str":2,
+    "agi":1,
+    "con":2,
+    "mag":3,
+    "xp": 0,
+    "spr":5,
+    "hp":15,
+    "mp":20,
+    "tough":1,
+    "mind":3,
+    "abilities":["heal"],
+    "weaponid":"basic rod",
+    "armorid":"robes",
+    "accessoryid":"nothing"
+  },
+  "two": {
+    "level":2,
+    "str":2,
+    "agi":1,
+    "con":3,
+    "mag":3,
+    "spr":6,
+    "class": "priest",
+    "hp":18,
+    "mp":23,
+    "tough":1,
+    "mind":4,
+    "abilities":["heal"]
+  },
+  "three": {
+    "level":3,
+    "str":2,
+    "agi":1,
+    "con":3,
+    "mag":4,
+    "spr":7,
+    "hp":21,
+    "mp":25,
+    "tough":1,
+    "mind":4,
+    "abilities":["heal", "poison"]
+  }
+}

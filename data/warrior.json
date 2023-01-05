@@ -1,0 +1,53 @@
+{
+  "one": {
+    "level": 1,
+    "str": 3,
+    "agi": 1,
+    "con": 2,
+    "mag": 1,
+    "class": "warrior",
+    "spr": 1,
+    "hp": 20,
+    "xp": 0,
+    "mp": 8,
+    "tough": 2,
+    "mind": 1,
+    "abilities": [
+      "rush"
+    ],
+    "weaponid": "idagg",
+    "armorid": "clothes",
+    "accessoryid": "nothing"
+  },
+  "two": {
+    "level": 2,
+    "str": 4,
+    "agi": 1,
+    "con": 3,
+    "mag": 0,
+    "spr": 1,
+    "hp": 23,
+    "mp": 10,
+    "tough": 3,
+    "mind": 2,
+    "abilities": [
+      "rush"
+    ]
+  },
+  "three": {
+    "level": 3,
+    "str": 5,
+    "agi": 2,
+    "con": 3,
+    "mag": 0,
+    "spr": 1,
+    "hp": 25,
+    "mp": 12,
+    "tough": 5,
+    "mind": 2,
+    "abilities": [
+      "rush",
+      "bash"
+    ]
+  }
+}
