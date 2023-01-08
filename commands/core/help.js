@@ -1,3 +1,5 @@
+const Discord = require("discord.js")
+
 module.exports = {
     name: 'help',
     aliases: ['h'],
@@ -22,33 +24,83 @@ module.exports = {
             const image_manipulation = message.client.commands.filter(x => x.category == 'image-manipulation').map((x) => '`' + x.name + '`').join(', ');
             const search = message.client.commands.filter(x => x.category == 'search').map((x) => '`' + x.name + '`').join(', ');
 
-            message.channel.send({
-                embed: {
-                    color: 'RANDOM',
-                    author: { name: 'Help panel' },
-                    footer: { text: 'This bot uses a github project made by chaosgamingx.' },
-                    fields: [
-                        { name: 'Bot', value: infos },
-                        { name: 'Chatbot', value: chatbot },
-                        { name: 'D&D', value: DungeonsAndDragons },
-                        { name: 'Owner', value: owner },
-                        { name: 'Music', value: music },
-                        { name: 'Anime', value: anime},
-                        { name: 'Games', value: games},
-                        { name: 'Memes', value: memes},
-                        { name: 'Moderator', value: moderator},
-                        { name: 'Fun', value: fun },
-                        { name: 'Images', value: images },
-                        {name: 'Economy', value: economy},
-                        {name: 'Image manipulation', value: image_manipulation},
-                        {name: 'search', value: search},
+            let pageName = [
+                "infos",
+                "DungeonsAndDragons",
+                "chatbot",
+                "owner",
+                "music",
+                "anime",
+                "games",
+                "memes",
+                "moderator",
+                "fun",
+                "images",
+                "economy",
+                "image_manipulation",
+                "search"
+            ]
 
-                        { name: 'Filters', value: client.filters.map((x) => '`' + x + '`').join(', ') },
-                    ],
-                    timestamp: new Date(),
-                    description: `To use filters, ${client.config.discord.prefix}filter (the filter). Example : ${client.config.discord.prefix}filter 8D.`,
-                },
-            });
+            let pages = [
+                infos,
+                DungeonsAndDragons,
+                chatbot,
+                owner,
+                music,
+                anime,
+                games,
+                memes,
+                moderator,
+                fun,
+                images,
+                economy,
+                image_manipulation,
+                search
+            ];
+            let page = 1;
+
+            const embed = new Discord.MessageEmbed()
+                .setAuthor(`Help panel - ${pageName[page - 1]}`)
+                .setColor('RANDOM')
+                .setFooter(`This bot uses a github project made by Chaosgamingx!   page ${page} / ${pages.length}`)
+                .setDescription(pages[page - 1])
+                .setTimestamp(new Date())
+            message.channel.send(embed).then(msg => {
+
+                msg.react('⏪')
+                    .then(r => {
+                        msg.react('⏩')
+
+                        //Filter
+                        const backwardsFilter = (reaction, user) => reaction.emoji.name === '⏪' && user.id === message.author.id;
+                        const forwardsFilter = (reaction, user) => reaction.emoji.name === '⏩' && user.id === message.author.id;
+
+                        const backwards = msg.createReactionCollector(backwardsFilter, { time: 100000 });
+                        const forwards = msg.createReactionCollector(forwardsFilter, { time: 100000 });
+
+                        forwards.on('collect', r => {
+                            if (page === pages.length) return;
+                            page++;
+                            embed.setAuthor(`Help panel - ${pageName[page - 1]}`)
+                            embed.setDescription(pages[page - 1]);
+                            embed.setColor('RANDOM')
+                            embed.setFooter(`This bot uses a github project made by Chaosgamingx!   page ${page} / ${pages.length}`)
+                            msg.edit(embed)
+                        })
+
+                        backwards.on('collect', r => {
+                            if (page === 1) return;
+                            page--;
+                            embed.setAuthor(`Help panel - ${pageName[page - 1]}`)
+                            embed.setColor('RANDOM')
+                            embed.setDescription(pages[page - 1]);
+                            embed.setFooter(`This bot uses a github project made by Chaosgamingx!   page ${page} / ${pages.length}`)
+                            msg.edit(embed)
+                        })
+
+                    })
+            })
+
         } else {
             const command = message.client.commands.get(args.join(" ").toLowerCase()) || message.client.commands.find(x => x.aliases && x.aliases.includes(args.join(" ").toLowerCase()));
 
