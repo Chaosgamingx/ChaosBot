@@ -9,7 +9,8 @@ module.exports = {
 
     discord: {
         prefix: '=', //replace this with your preferred prefix
-
+        serverURL: "https://discord.gg/cSJuaWBBc7",
+        inviteURL: "https://discord.com/oauth2/authorize?client_id=1023731050251296769&permissions=4374424190327&scope=applications.commands%20bot",
         activity: [
             "prefix is =",
             "smoking in this server is prohibited, unless your me and your smokin' hot",
