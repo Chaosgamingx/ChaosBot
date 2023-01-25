@@ -12,8 +12,8 @@ module.exports = {
 
     const embed = new Discord.MessageEmbed()
 		.setColor("RANDOM")
-		.addField("IF you need help with chaosBot then feel free to ask in the official ChaosBot server", "[here](client.config.discord.serverURL)")
-		.addField("If you want to add ChaosBot to your server", "than click [here](client.config.discord.inviteURL)")
+		.addField(`If you need help with chaosBot then feel free to ask in the official ChaosBot server ${client.config.discord.serverURL}`)
+		.addField(`If you want to add ChaosBot to your server ${client.config.discord.inviteURL}`)
 		.setTimestamp()
 	message.channel.send(embed)
 }}
