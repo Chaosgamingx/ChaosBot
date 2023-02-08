@@ -34,7 +34,7 @@ module.exports = {
                 )
                 const embed = new Discord.MessageEmbed()
                     .setTitle(`**${message.author.username}'s** Bank`)
-                    .setDescription(`Successfully withdrew ${profile.bank} to your wallet`)
+                    .setDescription(`Successfully withdrew ${profileData.bank} to your wallet`)
                     .setColor("RANDOM")
                     .setTimestamp()
                 message.channel.send(embed)
